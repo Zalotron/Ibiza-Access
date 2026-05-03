@@ -53,10 +53,10 @@ export function ServiceCard({
         delay: Math.min(index * 0.06, 0.4),
         ease: [0.22, 1, 0.36, 1],
       }}
-      className={cn("group relative overflow-hidden rounded-xl", className)}
+      className={cn("group relative overflow-hidden rounded-md", className)}
     >
       <Link href={`/services/${service.slug}`} className="block">
-        <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-muted">
+        <div className="relative aspect-[4/5] overflow-hidden rounded-md bg-muted">
           <Image
             src={service.image}
             alt={service.title[locale]}
@@ -69,7 +69,7 @@ export function ServiceCard({
             type="button"
             onClick={handleToggle}
             className={cn(
-              "absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full backdrop-blur-md transition-all",
+              "absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-md backdrop-blur-md transition-all",
               inTrip
                 ? "bg-accent text-accent-foreground"
                 : "bg-foreground/10 text-foreground hover:bg-accent hover:text-accent-foreground",
@@ -102,7 +102,7 @@ export function ServiceCard({
         </div>
       </Link>
       {inTrip && (
-        <div className="pointer-events-none absolute inset-0 rounded-xl ring-2 ring-accent" />
+        <div className="pointer-events-none absolute inset-0 rounded-md ring-2 ring-accent" />
       )}
     </motion.article>
   );

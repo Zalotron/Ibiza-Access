@@ -30,7 +30,7 @@ export function HeadlineSection() {
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className="relative lg:col-span-5"
         >
-          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-muted">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-md bg-muted">
             <motion.div style={{ y: imgY }} className="absolute -inset-y-10 inset-x-0">
               <Image
                 src="https://ibiza-access.com/wp-content/uploads/2025/04/photo-home-page-new-.jpg"
@@ -41,7 +41,7 @@ export function HeadlineSection() {
               />
             </motion.div>
           </div>
-          <div className="absolute -inset-x-4 -bottom-4 -z-10 h-2/3 rounded-2xl bg-accent/15 blur-3xl" />
+          <div className="absolute -inset-x-4 -bottom-4 -z-10 h-2/3 rounded-md bg-accent/15 blur-3xl" />
         </motion.div>
 
         <div className="lg:col-span-7">

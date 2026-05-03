@@ -124,7 +124,7 @@ export function ServiceDetail({
             ))}
           </ul>
 
-          <div className="mt-16 grid gap-6 rounded-2xl border border-foreground/10 bg-card p-8">
+          <div className="mt-16 grid gap-6 rounded-md border border-foreground/10 bg-card p-8">
             <p className="text-xs uppercase tracking-[0.28em] text-accent">
               {tServices("howCoordinate")}
             </p>
@@ -135,7 +135,7 @@ export function ServiceDetail({
         </div>
 
         <aside className="lg:sticky lg:top-32 lg:self-start">
-          <div className="rounded-2xl border border-foreground/10 bg-card p-8">
+          <div className="rounded-md border border-foreground/10 bg-card p-8">
             {service.basePriceCents > 0 ? (
               <>
                 <p className="text-xs uppercase tracking-[0.28em] text-foreground/50">

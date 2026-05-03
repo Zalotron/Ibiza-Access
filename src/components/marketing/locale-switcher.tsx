@@ -33,7 +33,7 @@ export function LocaleSwitcher({ className }: { className?: string }) {
             type="button"
             onClick={() => router.replace(pathname, { locale })}
             className={cn(
-              "rounded-full px-1 transition-opacity",
+              "rounded-sm px-1 transition-opacity",
               current === locale
                 ? "opacity-100"
                 : "opacity-40 hover:opacity-100",

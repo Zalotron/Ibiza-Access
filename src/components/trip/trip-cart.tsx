@@ -74,9 +74,9 @@ export function TripCart({ locale }: { locale: Locale }) {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, x: -40 }}
                   transition={{ duration: 0.3 }}
-                  className="group relative flex gap-5 rounded-xl border border-foreground/10 bg-card p-4 sm:p-6"
+                  className="group relative flex gap-5 rounded-md border border-foreground/10 bg-card p-4 sm:p-6"
                 >
-                  <div className="relative h-28 w-28 flex-shrink-0 overflow-hidden rounded-lg sm:h-32 sm:w-32">
+                  <div className="relative h-28 w-28 flex-shrink-0 overflow-hidden rounded-sm sm:h-32 sm:w-32">
                     <Image
                       src={item.imageSnapshot}
                       alt={item.titleSnapshot}
@@ -103,7 +103,7 @@ export function TripCart({ locale }: { locale: Locale }) {
                       </button>
                     </div>
                     <div className="mt-3 flex flex-wrap items-center gap-3 text-xs">
-                      <label className="inline-flex items-center gap-2 rounded-full border border-foreground/15 px-3 py-1.5 text-foreground/70">
+                      <label className="inline-flex items-center gap-2 rounded-md border border-foreground/15 px-3 py-1.5 text-foreground/70">
                         <Calendar className="h-3 w-3" aria-hidden="true" />
                         <span className="sr-only">{tTrip("startDate")}</span>
                         <input
@@ -116,7 +116,7 @@ export function TripCart({ locale }: { locale: Locale }) {
                           className="bg-transparent text-foreground outline-none"
                         />
                       </label>
-                      <label className="inline-flex items-center gap-2 rounded-full border border-foreground/15 px-3 py-1.5 text-foreground/70">
+                      <label className="inline-flex items-center gap-2 rounded-md border border-foreground/15 px-3 py-1.5 text-foreground/70">
                         <Users className="h-3 w-3" aria-hidden="true" />
                         <span className="sr-only">{tTrip("guests")}</span>
                         <input
@@ -155,7 +155,7 @@ export function TripCart({ locale }: { locale: Locale }) {
         </ul>
 
         <aside className="lg:sticky lg:top-32 lg:self-start">
-          <div className="rounded-2xl border border-foreground/10 bg-card p-8">
+          <div className="rounded-md border border-foreground/10 bg-card p-8">
             <p className="text-xs uppercase tracking-[0.28em] text-foreground/50">
               {tTrip("summary")}
             </p>

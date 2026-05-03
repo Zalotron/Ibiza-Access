@@ -71,7 +71,7 @@ function ConfirmationInner({ locale }: { locale: Locale }) {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.7 }}
-          className="mx-auto mt-12 max-w-md rounded-2xl border border-foreground/10 bg-card p-8 text-left"
+          className="mx-auto mt-12 max-w-md rounded-md border border-foreground/10 bg-card p-8 text-left"
         >
           <div className="flex items-center justify-between">
             <p className="text-xs uppercase tracking-[0.28em] text-foreground/50">

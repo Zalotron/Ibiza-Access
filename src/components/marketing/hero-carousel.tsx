@@ -6,7 +6,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { ArrowRight, ArrowDown } from "lucide-react";
+import { ArrowRight, ArrowDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -64,7 +64,7 @@ export function HeroCarousel() {
     <section
       aria-roledescription="carousel"
       aria-label={t("heroTitle")}
-      className="relative isolate min-h-[100svh] overflow-hidden"
+      className="group relative isolate min-h-[100svh] overflow-hidden"
     >
       <div ref={emblaRef} className="absolute inset-0 -z-10 h-full">
         <div className="flex h-full">
@@ -134,12 +134,29 @@ export function HeroCarousel() {
           </Link>
           <Link
             href="/services"
-            className="inline-flex h-14 items-center gap-2 rounded-full border border-white/40 bg-white/10 px-8 text-base font-medium text-white backdrop-blur-sm transition-all hover:bg-white hover:text-foreground"
+            className="inline-flex h-14 items-center gap-2 rounded-md border border-white/40 bg-black/50 px-8 text-base font-medium text-white backdrop-blur-md transition-all hover:bg-white hover:text-foreground"
           >
             {tCta("viewServices")}
           </Link>
         </motion.div>
       </div>
+
+      <button
+        type="button"
+        onClick={() => emblaApi?.scrollPrev()}
+        aria-label="Previous slide"
+        className="absolute inset-y-0 left-0 z-20 flex w-20 items-center justify-center bg-black/50 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 focus-visible:opacity-100 sm:w-24 lg:w-28"
+      >
+        <ChevronLeft className="h-7 w-7" aria-hidden="true" />
+      </button>
+      <button
+        type="button"
+        onClick={() => emblaApi?.scrollNext()}
+        aria-label="Next slide"
+        className="absolute inset-y-0 right-0 z-20 flex w-20 items-center justify-center bg-black/50 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 focus-visible:opacity-100 sm:w-24 lg:w-28"
+      >
+        <ChevronRight className="h-7 w-7" aria-hidden="true" />
+      </button>
 
       <div className="absolute inset-x-0 bottom-8 z-10 flex justify-center gap-2">
         {SLIDES.map((_, i) => (
@@ -148,7 +165,7 @@ export function HeroCarousel() {
             type="button"
             onClick={() => emblaApi?.scrollTo(i)}
             className={cn(
-              "h-1.5 rounded-full transition-all",
+              "h-1.5 rounded-sm transition-all",
               i === index
                 ? "w-10 bg-accent"
                 : "w-3 bg-white/40 hover:bg-white/70",

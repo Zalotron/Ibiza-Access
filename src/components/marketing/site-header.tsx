@@ -74,7 +74,7 @@ export function SiteHeader({ locale: _locale }: { locale: Locale }) {
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="grid h-10 w-10 place-items-center rounded-full border border-current/30 lg:hidden"
+            className="grid h-10 w-10 place-items-center rounded-md border border-current/30 lg:hidden"
             aria-label="Menu"
             aria-expanded={open}
           >

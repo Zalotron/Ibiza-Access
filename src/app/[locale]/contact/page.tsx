@@ -75,7 +75,7 @@ export default async function ContactPage({
           <a
             key={entry.label}
             href={entry.href ?? "#"}
-            className="group rounded-2xl border border-foreground/10 bg-card p-8 transition-colors hover:border-accent"
+            className="group rounded-md border border-foreground/10 bg-card p-8 transition-colors hover:border-accent"
           >
             <entry.icon className="h-6 w-6 text-accent" />
             <p className="mt-6 text-xs uppercase tracking-[0.28em] text-foreground/50">

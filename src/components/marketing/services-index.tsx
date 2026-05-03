@@ -58,7 +58,7 @@ export function ServicesIndex({ locale }: { locale: Locale }) {
             type="button"
             onClick={() => setActive(id)}
             className={cn(
-              "rounded-full border px-4 py-2 text-xs uppercase tracking-[0.2em] transition-colors",
+              "rounded-md border px-4 py-2 text-xs uppercase tracking-[0.2em] transition-colors",
               active === id
                 ? "border-accent bg-accent text-accent-foreground"
                 : "border-foreground/15 text-foreground/70 hover:border-foreground/30",

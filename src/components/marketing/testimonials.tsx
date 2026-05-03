@@ -47,7 +47,7 @@ export function Testimonials({ locale }: { locale: Locale }) {
           <button
             type="button"
             onClick={scrollPrev}
-            className="grid h-12 w-12 place-items-center rounded-full border border-foreground/15 text-foreground/70 transition-colors hover:border-accent hover:text-accent"
+            className="grid h-12 w-12 place-items-center rounded-md border border-foreground/15 text-foreground/70 transition-colors hover:border-accent hover:text-accent"
             aria-label="Previous"
           >
             <ChevronLeft className="h-4 w-4" />
@@ -55,7 +55,7 @@ export function Testimonials({ locale }: { locale: Locale }) {
           <button
             type="button"
             onClick={scrollNext}
-            className="grid h-12 w-12 place-items-center rounded-full border border-foreground/15 text-foreground/70 transition-colors hover:border-accent hover:text-accent"
+            className="grid h-12 w-12 place-items-center rounded-md border border-foreground/15 text-foreground/70 transition-colors hover:border-accent hover:text-accent"
             aria-label="Next"
           >
             <ChevronRight className="h-4 w-4" />
@@ -70,7 +70,7 @@ export function Testimonials({ locale }: { locale: Locale }) {
               key={testimonial.id}
               className="min-w-0 flex-[0_0_100%] pr-6 sm:flex-[0_0_60%] lg:flex-[0_0_45%]"
             >
-              <div className="flex h-full flex-col gap-8 rounded-2xl border border-foreground/5 bg-card p-8 sm:p-12">
+              <div className="flex h-full flex-col gap-8 rounded-md border border-foreground/5 bg-card p-8 sm:p-12">
                 <Quote className="h-8 w-8 text-accent" aria-hidden="true" />
                 <p className="font-display text-pretty text-2xl leading-snug text-foreground sm:text-3xl">
                   {testimonial.quote[locale]}
@@ -101,7 +101,7 @@ export function Testimonials({ locale }: { locale: Locale }) {
             type="button"
             onClick={() => emblaApi?.scrollTo(idx)}
             className={cn(
-              "h-1 rounded-full transition-all",
+              "h-1 rounded-sm transition-all",
               selectedIndex === idx
                 ? "w-8 bg-accent"
                 : "w-3 bg-foreground/20 hover:bg-foreground/40",

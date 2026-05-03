@@ -145,17 +145,25 @@ export function HeroCarousel() {
         type="button"
         onClick={() => emblaApi?.scrollPrev()}
         aria-label="Previous slide"
-        className="absolute inset-y-0 left-0 z-20 flex w-20 items-center justify-center text-white opacity-0 transition-opacity duration-150 hover:opacity-100 focus-visible:opacity-100 sm:w-24 lg:w-28 [background:linear-gradient(to_bottom,transparent_0%,rgba(0,0,0,0.5)_30%,rgba(0,0,0,0.5)_70%,transparent_100%)]"
+        className="group/prev absolute inset-y-0 left-0 z-20 w-20 sm:w-24 lg:w-28"
       >
-        <ChevronLeft className="h-7 w-7" aria-hidden="true" />
+        <div
+          className="absolute inset-0 flex -translate-x-full items-center justify-center text-white backdrop-blur-md transition-transform duration-200 ease-out group-hover/prev:translate-x-0 group-focus-visible/prev:translate-x-0 [background:linear-gradient(to_bottom,transparent_0%,rgba(0,0,0,0.5)_30%,rgba(0,0,0,0.5)_70%,transparent_100%)]"
+        >
+          <ChevronLeft className="h-7 w-7" aria-hidden="true" />
+        </div>
       </button>
       <button
         type="button"
         onClick={() => emblaApi?.scrollNext()}
         aria-label="Next slide"
-        className="absolute inset-y-0 right-0 z-20 flex w-20 items-center justify-center text-white opacity-0 transition-opacity duration-150 hover:opacity-100 focus-visible:opacity-100 sm:w-24 lg:w-28 [background:linear-gradient(to_bottom,transparent_0%,rgba(0,0,0,0.5)_30%,rgba(0,0,0,0.5)_70%,transparent_100%)]"
+        className="group/next absolute inset-y-0 right-0 z-20 w-20 sm:w-24 lg:w-28"
       >
-        <ChevronRight className="h-7 w-7" aria-hidden="true" />
+        <div
+          className="absolute inset-0 flex translate-x-full items-center justify-center text-white backdrop-blur-md transition-transform duration-200 ease-out group-hover/next:translate-x-0 group-focus-visible/next:translate-x-0 [background:linear-gradient(to_bottom,transparent_0%,rgba(0,0,0,0.5)_30%,rgba(0,0,0,0.5)_70%,transparent_100%)]"
+        >
+          <ChevronRight className="h-7 w-7" aria-hidden="true" />
+        </div>
       </button>
 
       <div className="absolute inset-x-0 bottom-8 z-10 flex justify-center gap-2">

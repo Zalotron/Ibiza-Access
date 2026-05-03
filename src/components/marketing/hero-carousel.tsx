@@ -146,24 +146,30 @@ export function HeroCarousel() {
         type="button"
         onClick={() => emblaApi?.scrollPrev()}
         aria-label="Previous slide"
-        className="group/prev absolute inset-y-0 left-0 z-20 w-20 sm:w-24 lg:w-28"
+        className="group/prev absolute inset-y-0 left-0 z-20 w-32 sm:w-44 lg:w-56"
       >
-        <div
-          className="absolute inset-0 flex -translate-x-full items-center justify-center text-white backdrop-blur-md transition-transform duration-default ease-default group-hover/prev:translate-x-0 group-focus-visible/prev:translate-x-0 [background:linear-gradient(to_bottom,transparent_0%,rgba(0,0,0,0.25)_30%,rgba(0,0,0,0.25)_70%,transparent_100%)]"
-        >
-          <ChevronLeft className="h-7 w-7" aria-hidden="true" />
+        <div className="absolute inset-0 -translate-x-full transition-transform duration-default ease-default group-hover/prev:translate-x-0 group-focus-visible/prev:translate-x-0">
+          <div
+            className="absolute inset-0 backdrop-blur-md [-webkit-mask-image:linear-gradient(to_right,black_0%,black_25%,transparent_100%)] [mask-image:linear-gradient(to_right,black_0%,black_25%,transparent_100%)]"
+          />
+          <div className="relative flex h-full items-center justify-start pl-6 text-white text-shadow-photo sm:pl-8 lg:pl-10">
+            <ChevronLeft className="h-12 w-12" aria-hidden="true" />
+          </div>
         </div>
       </button>
       <button
         type="button"
         onClick={() => emblaApi?.scrollNext()}
         aria-label="Next slide"
-        className="group/next absolute inset-y-0 right-0 z-20 w-20 sm:w-24 lg:w-28"
+        className="group/next absolute inset-y-0 right-0 z-20 w-32 sm:w-44 lg:w-56"
       >
-        <div
-          className="absolute inset-0 flex translate-x-full items-center justify-center text-white backdrop-blur-md transition-transform duration-default ease-default group-hover/next:translate-x-0 group-focus-visible/next:translate-x-0 [background:linear-gradient(to_bottom,transparent_0%,rgba(0,0,0,0.25)_30%,rgba(0,0,0,0.25)_70%,transparent_100%)]"
-        >
-          <ChevronRight className="h-7 w-7" aria-hidden="true" />
+        <div className="absolute inset-0 translate-x-full transition-transform duration-default ease-default group-hover/next:translate-x-0 group-focus-visible/next:translate-x-0">
+          <div
+            className="absolute inset-0 backdrop-blur-md [-webkit-mask-image:linear-gradient(to_left,black_0%,black_25%,transparent_100%)] [mask-image:linear-gradient(to_left,black_0%,black_25%,transparent_100%)]"
+          />
+          <div className="relative flex h-full items-center justify-end pr-6 text-white text-shadow-photo sm:pr-8 lg:pr-10">
+            <ChevronRight className="h-12 w-12" aria-hidden="true" />
+          </div>
         </div>
       </button>
 

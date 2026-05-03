@@ -1,0 +1,125 @@
+{
+  "site": {
+    "name": "Ibiza Access",
+    "tagline": "Conciergerie de luxe à Ibiza",
+    "description": "Concevez votre voyage parfait à Ibiza. Villas, yachts, jets privés, chefs et expériences VIP — tout au même endroit."
+  },
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "trip": "Mon voyage",
+    "blog": "Blog",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "cta": {
+    "buildTrip": "Concevez votre voyage",
+    "viewServices": "Voir les services",
+    "addToTrip": "Ajouter au voyage",
+    "removeFromTrip": "Retirer du voyage",
+    "viewTrip": "Voir mon voyage",
+    "checkout": "Continuer",
+    "back": "Retour",
+    "submit": "Envoyer la demande",
+    "payDeposit": "Payer l'acompte"
+  },
+  "home": {
+    "heroEyebrow": "Ibiza, sans intermédiaires",
+    "heroTitle": "Votre Ibiza, exactement comme vous l'imaginez.",
+    "heroSubtitle": "Concevez chaque détail de votre voyage — villas, yachts, chefs privés, tables VIP — puis envoyez la demande quand tout est prêt. Sans aller-retours.",
+    "scroll": "scroll",
+    "servicesEyebrow": "Services",
+    "servicesTitle": "Tout ce dont vous avez besoin. Une seule conversation.",
+    "processEyebrow": "Comment ça marche",
+    "processTitle": "Trois étapes. Zéro friction.",
+    "processStep1Title": "Concevez votre voyage",
+    "processStep1Body": "Parcourez les services et ajoutez ce que vous voulez à votre itinéraire. Villa, yachts, chef, tables VIP — tout au même endroit.",
+    "processStep2Title": "Recevez votre proposition",
+    "processStep2Body": "En 24h votre concierge dédié vous envoie une proposition détaillée avec disponibilités, prix fermes et alternatives.",
+    "processStep3Title": "Profitez d'Ibiza",
+    "processStep3Body": "Vous payez un acompte pour confirmer et nous nous occupons du reste. Vous arrivez et tout est coordonné.",
+    "testimonialsEyebrow": "Ce que disent les voyageurs",
+    "ctaTitle": "Commencez à concevoir votre voyage",
+    "ctaSubtitle": "Ajoutez ce que vous voulez, ajustez les dates, et nous nous occupons du reste."
+  },
+  "services": {
+    "catalog": "Catalogue",
+    "title": "Services",
+    "subtitle": "Sélectionnés pour que votre séjour soit sans aucune friction.",
+    "addedToTrip": "Ajouté à votre voyage",
+    "from": "À partir de",
+    "price": "Prix",
+    "whatsIncluded": "Ce qui est inclus",
+    "howCoordinate": "Comment nous coordonnons",
+    "coordinationCopy": "Une fois ce service ajouté à votre voyage, nous le confirmons selon vos dates, le nombre d'invités et vos préférences spécifiques. Votre concierge dédié s'occupe de tous les détails opérationnels.",
+    "categories": {
+      "all": "Tout",
+      "stay": "Hébergement",
+      "transport": "Transport",
+      "experience": "Expériences",
+      "wellness": "Wellness"
+    }
+  },
+  "trip": {
+    "empty": "Votre voyage est vide",
+    "emptyHint": "Ajoutez des services depuis le catalogue pour construire votre itinéraire.",
+    "title": "Votre voyage à Ibiza",
+    "summary": "Résumé",
+    "total": "Total estimé",
+    "deposit": "Acompte pour confirmer",
+    "items": "Services inclus",
+    "remove": "Retirer",
+    "estimateNotice": "Le total est estimé. Une fois confirmé, nous coordonnons la disponibilité réelle et les prix définitifs."
+  },
+  "checkout": {
+    "eyebrow": "Dernière étape",
+    "title": "Derniers détails",
+    "name": "Nom",
+    "email": "Email",
+    "phone": "Téléphone",
+    "notes": "Notes additionnelles",
+    "notesPlaceholder": "Nombre d'invités, préférences, dates approximatives, etc.",
+    "submit": "Envoyer & payer l'acompte",
+    "sending": "Envoi…",
+    "summary": "Résumé",
+    "estimatedTotal": "Total estimé",
+    "depositLabel": "Acompte"
+  },
+  "confirmation": {
+    "title": "Demande reçue",
+    "subtitle": "Nous vous recontactons sous 24h avec la proposition finale.",
+    "reference": "Référence",
+    "estimatedTotal": "Total estimé"
+  },
+  "about": {
+    "eyebrow": "À propos",
+    "title": "Nous concevons des voyages de luxe à Ibiza depuis 2018.",
+    "p1": "Nous sommes nés pour résoudre ce dont le client premium a besoin à Ibiza : un interlocuteur unique, des propriétés et expériences exclusives, et des réponses immédiates. Sans intermédiaires, sans promesses creuses.",
+    "p2": "Nous travaillons avec un cercle fermé de villas off-market, capitaines de yachts, chefs étoilés et fournisseurs qui ont passé des filtres stricts pendant des années. Si c'est dans notre catalogue, nous l'avons déjà testé.",
+    "p3": "Notre équipe vit sur l'île toute l'année. Nous savons quels clubs sont vrais et lesquels vendent du vent, quelle plage sera tranquille mardi et quelle villa a le meilleur lever de soleil en septembre."
+  },
+  "blog": {
+    "eyebrow": "Stories",
+    "title": "Histoires & guides d'Ibiza",
+    "comingSoon": "Bientôt disponible."
+  },
+  "contact": {
+    "eyebrow": "Contactez-nous",
+    "title": "Parlons quand vous êtes prêt.",
+    "phone": "Téléphone",
+    "email": "Email",
+    "office": "Bureau"
+  },
+  "notFound": {
+    "title": "Page non trouvée",
+    "back": "Retour à l'accueil"
+  },
+  "loading": "Chargement…",
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "terms": "Conditions générales",
+    "privacy": "Confidentialité",
+    "language": "Langue",
+    "contact": "Contact"
+  }
+}

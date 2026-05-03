@@ -1,0 +1,125 @@
+{
+  "site": {
+    "name": "Ibiza Access",
+    "tagline": "Luxury concierge in Ibiza",
+    "description": "Design your perfect Ibiza trip. Villas, yachts, private jets, chefs and VIP experiences — all in one place."
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "trip": "My trip",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "cta": {
+    "buildTrip": "Build your trip",
+    "viewServices": "View services",
+    "addToTrip": "Add to trip",
+    "removeFromTrip": "Remove from trip",
+    "viewTrip": "View my trip",
+    "checkout": "Continue",
+    "back": "Back",
+    "submit": "Submit request",
+    "payDeposit": "Pay deposit"
+  },
+  "home": {
+    "heroEyebrow": "Ibiza, no middlemen",
+    "heroTitle": "Your Ibiza, exactly as you imagine it.",
+    "heroSubtitle": "Design every detail of your trip — villas, yachts, private chefs, VIP tables — then send the request when ready. No back-and-forth.",
+    "scroll": "scroll",
+    "servicesEyebrow": "Services",
+    "servicesTitle": "Everything you need. One conversation.",
+    "processEyebrow": "How it works",
+    "processTitle": "Three steps. Zero friction.",
+    "processStep1Title": "Design your trip",
+    "processStep1Body": "Browse the services and add what you want to your itinerary. Villa, yachts, chef, VIP tables — everything in one place.",
+    "processStep2Title": "Get your proposal",
+    "processStep2Body": "Within 24h your dedicated concierge sends a detailed proposal with availability, locked-in prices and alternatives.",
+    "processStep3Title": "Enjoy Ibiza",
+    "processStep3Body": "You pay a deposit to confirm and we handle the rest. You arrive and everything is coordinated.",
+    "testimonialsEyebrow": "What past travelers say",
+    "ctaTitle": "Start building your trip",
+    "ctaSubtitle": "Add what you want, adjust dates, and we'll lock in the rest."
+  },
+  "services": {
+    "catalog": "Catalog",
+    "title": "Services",
+    "subtitle": "Curated so your stay has zero friction.",
+    "addedToTrip": "Added to your trip",
+    "from": "From",
+    "price": "Price",
+    "whatsIncluded": "What's included",
+    "howCoordinate": "How we coordinate it",
+    "coordinationCopy": "Once you add this service to your trip, we confirm it based on your dates, guest count, and specific preferences. Your dedicated concierge handles all operational details.",
+    "categories": {
+      "all": "All",
+      "stay": "Stay",
+      "transport": "Transport",
+      "experience": "Experiences",
+      "wellness": "Wellness"
+    }
+  },
+  "trip": {
+    "empty": "Your trip is empty",
+    "emptyHint": "Add services from the catalog to build your itinerary.",
+    "title": "Your Ibiza trip",
+    "summary": "Summary",
+    "total": "Estimated total",
+    "deposit": "Deposit to confirm",
+    "items": "Services included",
+    "remove": "Remove",
+    "estimateNotice": "Total is estimated. Once confirmed we coordinate real availability and final pricing."
+  },
+  "checkout": {
+    "eyebrow": "Final step",
+    "title": "Final details",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "notes": "Additional notes",
+    "notesPlaceholder": "Number of guests, preferences, tentative dates, etc.",
+    "submit": "Submit & pay deposit",
+    "sending": "Sending…",
+    "summary": "Summary",
+    "estimatedTotal": "Estimated total",
+    "depositLabel": "Deposit"
+  },
+  "confirmation": {
+    "title": "Request received",
+    "subtitle": "We'll get back to you within 24h with the final proposal.",
+    "reference": "Reference",
+    "estimatedTotal": "Estimated total"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "We've designed luxury Ibiza trips since 2018.",
+    "p1": "We were born to solve what the premium client needs in Ibiza: a single point of contact, exclusive properties and experiences, and immediate answers. No middlemen, no empty promises.",
+    "p2": "We work with a closed circle of off-market villas, yacht captains, star chefs and suppliers who passed strict vetting for years. If it's in our catalog, we've already tested it.",
+    "p3": "Our team lives on the island year-round. We know which clubs are real and which sell smoke, which beach will be quiet on Tuesday and which villa has the best September sunrise."
+  },
+  "blog": {
+    "eyebrow": "Stories",
+    "title": "Ibiza stories & guides",
+    "comingSoon": "Coming soon."
+  },
+  "contact": {
+    "eyebrow": "Get in touch",
+    "title": "Let's talk when you're ready.",
+    "phone": "Phone",
+    "email": "Email",
+    "office": "Office"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "back": "Back to home"
+  },
+  "loading": "Loading…",
+  "footer": {
+    "rights": "All rights reserved.",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy",
+    "language": "Language",
+    "contact": "Contact"
+  }
+}

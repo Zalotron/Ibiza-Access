@@ -25,7 +25,7 @@ export function LocaleSwitcher({ className }: { className?: string }) {
       {routing.locales.map((locale, idx) => (
         <span key={locale} className="flex items-center gap-1">
           {idx > 0 && (
-            <span aria-hidden="true" className="text-foreground/30">
+            <span aria-hidden="true" className="opacity-30">
               ·
             </span>
           )}
@@ -33,10 +33,10 @@ export function LocaleSwitcher({ className }: { className?: string }) {
             type="button"
             onClick={() => router.replace(pathname, { locale })}
             className={cn(
-              "rounded-full px-1 transition-colors",
+              "rounded-full px-1 transition-opacity",
               current === locale
-                ? "text-foreground"
-                : "text-foreground/40 hover:text-foreground",
+                ? "opacity-100"
+                : "opacity-40 hover:opacity-100",
             )}
             aria-current={current === locale ? "true" : undefined}
             aria-label={localeNames[locale]}

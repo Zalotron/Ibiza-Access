@@ -71,22 +71,22 @@ export function ServiceDetail({
         </motion.div>
         <motion.div
           style={{ opacity: overlayOpacity }}
-          className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-background/30 via-background/50 to-background"
+          className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-black/30 via-black/40 to-background"
         />
 
         <div className="container-tight pb-16 pt-32">
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.28em] text-foreground/70 transition-colors hover:text-foreground"
+            className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.28em] text-white/80 transition-opacity hover:opacity-100"
           >
-            <ArrowLeft className="h-3 w-3" />
+            <ArrowLeft className="h-3 w-3" aria-hidden="true" />
             {tCta("back")}
           </Link>
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display mt-6 max-w-4xl text-balance text-5xl leading-[1.05] text-foreground sm:text-7xl lg:text-8xl"
+            className="font-display mt-6 max-w-4xl text-balance text-5xl leading-[1.05] text-white drop-shadow-[0_2px_24px_rgba(0,0,0,0.35)] sm:text-7xl lg:text-8xl"
           >
             {service.title[locale]}
           </motion.h1>
@@ -94,7 +94,7 @@ export function ServiceDetail({
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.3 }}
-            className="mt-6 max-w-2xl text-pretty text-base text-foreground/80 sm:text-lg"
+            className="mt-6 max-w-2xl text-pretty text-base text-white/90 drop-shadow-[0_1px_12px_rgba(0,0,0,0.4)] sm:text-lg"
           >
             {service.tagline[locale]}
           </motion.p>

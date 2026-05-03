@@ -34,8 +34,8 @@ export function SiteHeader({ locale: _locale }: { locale: Locale }) {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500 backdrop-blur-md",
         scrolled
-          ? "border-b border-foreground/5 bg-background/85 backdrop-blur-xl"
-          : "border-b border-foreground/0 bg-black/50",
+          ? "border-b border-foreground/10 bg-background/90 text-foreground backdrop-blur-xl"
+          : "border-b border-white/0 bg-black/30 text-white",
       )}
     >
       <div className="container-tight flex h-20 items-center justify-between">
@@ -61,7 +61,7 @@ export function SiteHeader({ locale: _locale }: { locale: Locale }) {
             <Link
               key={link.href}
               href={link.href}
-              className="text-xs uppercase tracking-[0.2em] text-foreground/70 transition-colors hover:text-foreground"
+              className="text-xs uppercase tracking-[0.2em] opacity-70 transition-opacity hover:opacity-100"
             >
               {link.label}
             </Link>
@@ -74,11 +74,15 @@ export function SiteHeader({ locale: _locale }: { locale: Locale }) {
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="grid h-10 w-10 place-items-center rounded-full border border-foreground/20 lg:hidden"
+            className="grid h-10 w-10 place-items-center rounded-full border border-current/30 lg:hidden"
             aria-label="Menu"
             aria-expanded={open}
           >
-            {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+            {open ? (
+              <X className="h-4 w-4" aria-hidden="true" />
+            ) : (
+              <Menu className="h-4 w-4" aria-hidden="true" />
+            )}
           </button>
         </div>
       </div>
@@ -90,7 +94,7 @@ export function SiteHeader({ locale: _locale }: { locale: Locale }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25 }}
-            className="border-t border-foreground/10 bg-background/95 backdrop-blur-xl lg:hidden"
+            className="border-t border-foreground/10 bg-background/95 text-foreground backdrop-blur-xl lg:hidden"
           >
             <nav className="container-tight flex flex-col gap-1 py-6">
               {links.map((link) => (
@@ -98,7 +102,7 @@ export function SiteHeader({ locale: _locale }: { locale: Locale }) {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="font-display py-3 text-2xl text-foreground/90"
+                  className="font-display py-3 text-2xl opacity-90 hover:opacity-100"
                 >
                   {link.label}
                 </Link>

@@ -32,7 +32,7 @@ export function CtaStrip() {
           className="object-cover"
         />
       </motion.div>
-      <div className="absolute inset-0 -z-10 bg-background/75" />
+      <div className="absolute inset-0 -z-10 bg-black/45" />
 
       <div className="container-tight text-center">
         <motion.h2
@@ -40,7 +40,7 @@ export function CtaStrip() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="font-display mx-auto max-w-3xl text-balance text-4xl text-foreground sm:text-6xl"
+          className="font-display mx-auto max-w-3xl text-balance text-4xl text-white drop-shadow-[0_2px_24px_rgba(0,0,0,0.35)] sm:text-6xl"
         >
           {t("ctaTitle")}
         </motion.h2>
@@ -49,7 +49,7 @@ export function CtaStrip() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="mx-auto mt-6 max-w-xl text-pretty text-base text-foreground/80 sm:text-lg"
+          className="mx-auto mt-6 max-w-xl text-pretty text-base text-white/90 drop-shadow-[0_1px_12px_rgba(0,0,0,0.4)] sm:text-lg"
         >
           {t("ctaSubtitle")}
         </motion.p>

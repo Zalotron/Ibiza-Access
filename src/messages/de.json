@@ -69,6 +69,8 @@
     "deposit": "Anzahlung zur Bestätigung",
     "items": "Inkludierte Services",
     "remove": "Entfernen",
+    "startDate": "Startdatum",
+    "guests": "Gäste",
     "estimateNotice": "Die Gesamtsumme ist geschätzt. Nach Bestätigung koordinieren wir reale Verfügbarkeit und endgültige Preise."
   },
   "checkout": {

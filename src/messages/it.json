@@ -69,6 +69,8 @@
     "deposit": "Acconto per confermare",
     "items": "Servizi inclusi",
     "remove": "Rimuovi",
+    "startDate": "Data di inizio",
+    "guests": "Ospiti",
     "estimateNotice": "Il totale è stimato. Una volta confermato coordineremo la disponibilità reale e i prezzi definitivi."
   },
   "checkout": {

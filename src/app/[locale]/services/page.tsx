@@ -1,6 +1,11 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { ServicesIndex } from "@/components/marketing/services-index";
 import type { Locale } from "@/i18n/routing";
+import {
+  buildAlternates,
+  buildOpenGraph,
+  buildTwitter,
+} from "@/lib/seo";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -10,9 +15,21 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "services" });
+  const typedLocale = locale as Locale;
+  const title = t("title");
+  const description = t("subtitle");
+
   return {
-    title: t("title"),
-    description: t("subtitle"),
+    title,
+    description,
+    alternates: buildAlternates(typedLocale, "/services"),
+    openGraph: buildOpenGraph({
+      locale: typedLocale,
+      pathname: "/services",
+      title,
+      description,
+    }),
+    twitter: buildTwitter({ title, description }),
   };
 }
 

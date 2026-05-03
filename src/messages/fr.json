@@ -69,6 +69,8 @@
     "deposit": "Acompte pour confirmer",
     "items": "Services inclus",
     "remove": "Retirer",
+    "startDate": "Date de début",
+    "guests": "Invités",
     "estimateNotice": "Le total est estimé. Une fois confirmé, nous coordonnons la disponibilité réelle et les prix définitifs."
   },
   "checkout": {

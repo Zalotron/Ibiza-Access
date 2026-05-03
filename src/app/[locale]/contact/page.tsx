@@ -1,5 +1,31 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Phone, Mail, MapPin } from "lucide-react";
+import type { Metadata } from "next";
+import type { Locale } from "@/i18n/routing";
+import { buildAlternates, buildOpenGraph, buildTwitter } from "@/lib/seo";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "contact" });
+  const title = t("title");
+  const description = t("title");
+  return {
+    title,
+    description,
+    alternates: buildAlternates(locale as Locale, "/contact"),
+    openGraph: buildOpenGraph({
+      locale: locale as Locale,
+      pathname: "/contact",
+      title,
+      description,
+    }),
+    twitter: buildTwitter({ title, description }),
+  };
+}
 
 export default async function ContactPage({
   params,

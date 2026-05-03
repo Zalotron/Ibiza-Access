@@ -4,6 +4,13 @@ import { services, getService } from "@/lib/data/services";
 import { ServiceDetail } from "@/components/marketing/service-detail";
 import { routing } from "@/i18n/routing";
 import type { Locale } from "@/i18n/routing";
+import {
+  SITE_URL,
+  SITE_NAME,
+  buildAlternates,
+  buildOpenGraph,
+  buildTwitter,
+} from "@/lib/seo";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -21,14 +28,22 @@ export async function generateMetadata({
   const service = getService(slug);
   if (!service) return {};
   const typedLocale = locale as Locale;
+  const title = service.title[typedLocale];
+  const description = service.tagline[typedLocale];
+  const pathname = `/services/${slug}`;
+
   return {
-    title: service.title[typedLocale],
-    description: service.tagline[typedLocale],
-    openGraph: {
-      title: service.title[typedLocale],
-      description: service.tagline[typedLocale],
-      images: [{ url: service.image }],
-    },
+    title,
+    description,
+    alternates: buildAlternates(typedLocale, pathname),
+    openGraph: buildOpenGraph({
+      locale: typedLocale,
+      pathname,
+      title,
+      description,
+      image: service.image,
+    }),
+    twitter: buildTwitter({ title, description, image: service.image }),
   };
 }
 
@@ -41,5 +56,70 @@ export default async function ServiceDetailPage({
   setRequestLocale(locale);
   const service = getService(slug);
   if (!service) notFound();
-  return <ServiceDetail service={service} locale={locale as Locale} />;
+  const typedLocale = locale as Locale;
+
+  const serviceLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.title[typedLocale],
+    description: service.tagline[typedLocale],
+    image: service.image,
+    provider: {
+      "@type": "TravelAgency",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    areaServed: {
+      "@type": "Place",
+      name: "Ibiza",
+    },
+    ...(service.basePriceCents > 0 && {
+      offers: {
+        "@type": "Offer",
+        price: (service.basePriceCents / 100).toFixed(2),
+        priceCurrency: service.currency,
+        availability: "https://schema.org/InStock",
+        url: `${SITE_URL}/${locale}/services/${slug}/`,
+      },
+    }),
+  };
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `${SITE_URL}/${locale}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: `${SITE_URL}/${locale}/services/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: service.title[typedLocale],
+        item: `${SITE_URL}/${locale}/services/${slug}/`,
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+      <ServiceDetail service={service} locale={typedLocale} />
+    </>
+  );
 }

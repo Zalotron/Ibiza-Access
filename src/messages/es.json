@@ -69,6 +69,8 @@
     "deposit": "Seña para confirmar",
     "items": "Servicios incluidos",
     "remove": "Quitar",
+    "startDate": "Fecha de inicio",
+    "guests": "Huéspedes",
     "estimateNotice": "El total es estimado. Al confirmar coordinamos disponibilidad real y precios definitivos."
   },
   "checkout": {

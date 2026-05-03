@@ -1,4 +1,30 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
+import type { Locale } from "@/i18n/routing";
+import { buildAlternates, buildOpenGraph, buildTwitter } from "@/lib/seo";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "blog" });
+  const title = t("title");
+  const description = t("comingSoon");
+  return {
+    title,
+    description,
+    alternates: buildAlternates(locale as Locale, "/blog"),
+    openGraph: buildOpenGraph({
+      locale: locale as Locale,
+      pathname: "/blog",
+      title,
+      description,
+    }),
+    twitter: buildTwitter({ title, description }),
+  };
+}
 
 export default async function BlogPage({
   params,

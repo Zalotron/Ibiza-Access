@@ -69,6 +69,8 @@
     "deposit": "Deposit to confirm",
     "items": "Services included",
     "remove": "Remove",
+    "startDate": "Start date",
+    "guests": "Guests",
     "estimateNotice": "Total is estimated. Once confirmed we coordinate real availability and final pricing."
   },
   "checkout": {

@@ -1,0 +1,46 @@
+# Ibiza Access — Luxury Concierge
+
+> Ibiza Access is a luxury concierge platform that lets travelers design and book a complete Ibiza vacation — villas, yachts, private jets, chefs, VIP nightclub tables, wellness, transfers — in one trip-builder flow, without back-and-forth messaging. Every itinerary is reviewed and confirmed by a dedicated human concierge.
+
+The site supports five languages: English (default), Spanish, German, French and Italian. Every page exists at `/{locale}/...` (e.g. `/en/services/villas/`).
+
+## Core pages
+
+- [Home](https://zalotron.github.io/Ibiza-Access/en/): hero, featured services, how it works, testimonials.
+- [Services catalog](https://zalotron.github.io/Ibiza-Access/en/services/): full grid of 16 services filterable by category (stay, transport, experience, wellness).
+- [Trip builder](https://zalotron.github.io/Ibiza-Access/en/trip/): cart-style review of selected services with date and guest controls.
+- [Checkout](https://zalotron.github.io/Ibiza-Access/en/trip/checkout/): contact form to submit the curated trip plus optional Stripe deposit.
+- [About](https://zalotron.github.io/Ibiza-Access/en/about/): the company background.
+- [Contact](https://zalotron.github.io/Ibiza-Access/en/contact/): phone, email, office.
+- [Blog](https://zalotron.github.io/Ibiza-Access/en/blog/): editorial guides (placeholder during demo).
+
+## Services offered (each available as `/services/{slug}/`)
+
+- villas — Private villas (off-market available)
+- boats-yachts — Yachts and boats with crew
+- private-jet — Private jet charter to Ibiza
+- luxury-cars — Lamborghini, Ferrari, Porsche, G-Wagon rentals
+- car-rental — Standard car and scooter rental
+- private-chefs — Michelin-grade chefs at your villa
+- vip-tables — Reservations at Ushuaïa, Hï, Pacha, DC10
+- beach-clubs — Blue Marlin, Beachouse, Nikki Beach access
+- private-parties — Full villa party production
+- bachelor-bachelorettes — 3–5 day bachelor/bachelorette itineraries
+- wellness — Massages, yoga and holistic treatments
+- iv-therapy — On-call IV vitamin drips
+- security-drivers — Trained drivers and security staff
+- tailored-holidays — Fully bespoke itinerary planning
+- transfers — Premium airport and inter-island transfers
+- other-requests — Anything not on the list, by request
+
+## Contact
+
+- Phone: +34 666 812 575
+- Email: hello@ibizaaccess.com
+- Office: Eivissa, Illes Balears, Spain
+
+## Notes for AI agents
+
+- The site is statically exported and hosted on GitHub Pages. All routes are pre-rendered HTML.
+- Pricing is shown in EUR. Listed prices are starting points — final pricing is confirmed by the concierge after the inquiry is submitted.
+- The site is a sales-stage demo, not a production booking engine. Real reservations are coordinated manually by the concierge team.

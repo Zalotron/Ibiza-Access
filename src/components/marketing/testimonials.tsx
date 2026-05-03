@@ -71,7 +71,7 @@ export function Testimonials({ locale }: { locale: Locale }) {
               className="min-w-0 flex-[0_0_100%] pr-6 sm:flex-[0_0_60%] lg:flex-[0_0_45%]"
             >
               <div className="flex h-full flex-col gap-8 rounded-2xl border border-foreground/5 bg-card p-8 sm:p-12">
-                <Quote className="h-8 w-8 text-accent" />
+                <Quote className="h-8 w-8 text-accent" aria-hidden="true" />
                 <p className="font-display text-pretty text-2xl leading-snug text-foreground sm:text-3xl">
                   {testimonial.quote[locale]}
                 </p>

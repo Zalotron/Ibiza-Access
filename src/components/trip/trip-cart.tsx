@@ -104,9 +104,11 @@ export function TripCart({ locale }: { locale: Locale }) {
                     </div>
                     <div className="mt-3 flex flex-wrap items-center gap-3 text-xs">
                       <label className="inline-flex items-center gap-2 rounded-full border border-foreground/15 px-3 py-1.5 text-foreground/70">
-                        <Calendar className="h-3 w-3" />
+                        <Calendar className="h-3 w-3" aria-hidden="true" />
+                        <span className="sr-only">{tTrip("startDate")}</span>
                         <input
                           type="date"
+                          aria-label={tTrip("startDate")}
                           value={item.startDate ?? ""}
                           onChange={(e) =>
                             update(item.id, { startDate: e.target.value })
@@ -115,9 +117,11 @@ export function TripCart({ locale }: { locale: Locale }) {
                         />
                       </label>
                       <label className="inline-flex items-center gap-2 rounded-full border border-foreground/15 px-3 py-1.5 text-foreground/70">
-                        <Users className="h-3 w-3" />
+                        <Users className="h-3 w-3" aria-hidden="true" />
+                        <span className="sr-only">{tTrip("guests")}</span>
                         <input
                           type="number"
+                          aria-label={tTrip("guests")}
                           min={1}
                           value={item.guests ?? 2}
                           onChange={(e) =>

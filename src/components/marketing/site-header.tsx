@@ -32,10 +32,10 @@ export function SiteHeader({ locale: _locale }: { locale: Locale }) {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-500 backdrop-blur-md",
+        "fixed inset-x-0 top-0 z-50 transition-all duration-default ease-default",
         scrolled
           ? "border-b border-foreground/10 bg-background/90 text-foreground backdrop-blur-xl"
-          : "border-b border-white/0 bg-black/30 text-white",
+          : "border-b border-white/0 bg-transparent text-white text-shadow-photo",
       )}
     >
       <div className="container-tight flex h-20 items-center justify-between">
@@ -44,7 +44,11 @@ export function SiteHeader({ locale: _locale }: { locale: Locale }) {
           <img
             src="https://ibiza-access.com/wp-content/uploads/2025/06/Ibiza-access-aa.png"
             alt=""
-            className="h-10 w-auto sm:h-12"
+            className={cn(
+              "h-10 w-auto transition-[filter] duration-default ease-default sm:h-12",
+              !scrolled &&
+                "[filter:brightness(0)_invert(1)_drop-shadow(0_0_12px_rgba(0,0,0,0.7))]",
+            )}
           />
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -52,7 +56,11 @@ export function SiteHeader({ locale: _locale }: { locale: Locale }) {
             alt="Ibiza Access"
             width={141}
             height={68}
-            className="hidden h-10 w-auto sm:block sm:h-12"
+            className={cn(
+              "hidden h-10 w-auto transition-[filter] duration-default ease-default sm:block sm:h-12",
+              !scrolled &&
+                "[filter:brightness(0)_invert(1)_drop-shadow(0_0_12px_rgba(0,0,0,0.7))]",
+            )}
           />
         </Link>
 

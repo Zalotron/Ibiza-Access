@@ -64,7 +64,7 @@ export function HeroCarousel() {
     <section
       aria-roledescription="carousel"
       aria-label={t("heroTitle")}
-      className="group relative isolate min-h-[100svh] overflow-hidden"
+      className="relative isolate min-h-[100svh] overflow-hidden"
     >
       <div ref={emblaRef} className="absolute inset-0 -z-10 h-full">
         <div className="flex h-full">
@@ -145,7 +145,7 @@ export function HeroCarousel() {
         type="button"
         onClick={() => emblaApi?.scrollPrev()}
         aria-label="Previous slide"
-        className="absolute inset-y-0 left-0 z-20 flex w-20 items-center justify-center bg-black/50 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 focus-visible:opacity-100 sm:w-24 lg:w-28"
+        className="absolute inset-y-0 left-0 z-20 flex w-20 items-center justify-center bg-black/50 text-white opacity-0 transition-opacity duration-300 hover:opacity-100 focus-visible:opacity-100 sm:w-24 lg:w-28"
       >
         <ChevronLeft className="h-7 w-7" aria-hidden="true" />
       </button>
@@ -153,7 +153,7 @@ export function HeroCarousel() {
         type="button"
         onClick={() => emblaApi?.scrollNext()}
         aria-label="Next slide"
-        className="absolute inset-y-0 right-0 z-20 flex w-20 items-center justify-center bg-black/50 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 focus-visible:opacity-100 sm:w-24 lg:w-28"
+        className="absolute inset-y-0 right-0 z-20 flex w-20 items-center justify-center bg-black/50 text-white opacity-0 transition-opacity duration-300 hover:opacity-100 focus-visible:opacity-100 sm:w-24 lg:w-28"
       >
         <ChevronRight className="h-7 w-7" aria-hidden="true" />
       </button>

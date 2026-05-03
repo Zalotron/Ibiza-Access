@@ -61,3 +61,12 @@ export function useIsInTrip(serviceSlug: string) {
     s.items.some((i) => i.serviceSlug === serviceSlug),
   );
 }
+
+/** Is a specific service-item (by its itemId under a serviceSlug) already in the trip? */
+export function useIsItemInTrip(serviceSlug: string, itemId: string) {
+  return useTripStore((s) =>
+    s.items.some(
+      (i) => i.serviceSlug === serviceSlug && i.itemId === itemId,
+    ),
+  );
+}

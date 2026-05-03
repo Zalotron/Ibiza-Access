@@ -21,12 +21,14 @@ export type Service = {
 export type TripItem = {
   id: string;
   serviceSlug: string;
+  /** id of the service-item picked (e.g. "can-retreat") — empty string for service-level entries without options */
+  itemId?: string;
   startDate?: string;
   endDate?: string;
   guests?: number;
   options?: Record<string, string | number | boolean>;
   priceCents: number;
-  /** snapshot of the service title at add-time for resilience */
+  /** snapshot of the title at add-time for resilience */
   titleSnapshot: string;
   imageSnapshot: string;
 };

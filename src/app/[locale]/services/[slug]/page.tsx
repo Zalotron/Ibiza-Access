@@ -123,7 +123,7 @@ export default async function ServiceDetailPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
       <ServiceDetail service={service} locale={typedLocale} />
-      <ServiceItemsGrid items={items} locale={typedLocale} />
+      <ServiceItemsGrid items={items} serviceSlug={slug} locale={typedLocale} />
     </>
   );
 }

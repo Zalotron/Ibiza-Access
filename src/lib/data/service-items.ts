@@ -15,6 +15,7 @@ import ivTherapy from "./items/iv-therapy.json";
 import securityDrivers from "./items/security-drivers.json";
 import tailoredHolidays from "./items/tailored-holidays.json";
 import transfers from "./items/transfers.json";
+import otherRequests from "./items/other-requests.json";
 
 const ITEMS: Record<string, ServiceItem[]> = {
   villas: villas as ServiceItem[],
@@ -32,6 +33,7 @@ const ITEMS: Record<string, ServiceItem[]> = {
   "security-drivers": securityDrivers as ServiceItem[],
   "tailored-holidays": tailoredHolidays as ServiceItem[],
   transfers: transfers as ServiceItem[],
+  "other-requests": otherRequests as ServiceItem[],
 };
 
 export function getServiceItems(slug: string): ServiceItem[] {

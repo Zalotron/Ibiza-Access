@@ -1,0 +1,86 @@
+[
+  {
+    "id": "can-retreat",
+    "name": "Can Retreat",
+    "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80",
+    "location": "Santa Eulalia",
+    "priceFromCents": 1020000,
+    "priceToCents": 2270000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 14 },
+      { "key": "bedrooms", "value": 6 },
+      { "key": "bathrooms", "value": 8 }
+    ]
+  },
+  {
+    "id": "casa-vedra",
+    "name": "Casa Vedrà",
+    "image": "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=1200&q=80",
+    "location": "Es Cubells",
+    "priceFromCents": 1800000,
+    "priceToCents": 3500000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 10 },
+      { "key": "bedrooms", "value": 5 },
+      { "key": "bathrooms", "value": 6 }
+    ]
+  },
+  {
+    "id": "villa-aurora",
+    "name": "Villa Aurora",
+    "image": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80",
+    "location": "Cap Martinet",
+    "priceFromCents": 800000,
+    "priceToCents": 1400000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 8 },
+      { "key": "bedrooms", "value": 4 },
+      { "key": "bathrooms", "value": 5 }
+    ]
+  },
+  {
+    "id": "cala-jondal-house",
+    "name": "Cala Jondal House",
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    "location": "Cala Jondal",
+    "priceFromCents": 1200000,
+    "priceToCents": 2400000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 12 },
+      { "key": "bedrooms", "value": 6 },
+      { "key": "bathrooms", "value": 7 }
+    ]
+  },
+  {
+    "id": "sa-pedrera",
+    "name": "Sa Pedrera",
+    "image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80",
+    "location": "Benirràs",
+    "priceFromCents": 2200000,
+    "priceToCents": 4200000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 16 },
+      { "key": "bedrooms", "value": 8 },
+      { "key": "bathrooms", "value": 9 }
+    ]
+  },
+  {
+    "id": "casa-talamanca",
+    "name": "Casa Talamanca",
+    "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
+    "location": "Talamanca",
+    "priceFromCents": 600000,
+    "priceToCents": 1100000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 6 },
+      { "key": "bedrooms", "value": 3 },
+      { "key": "bathrooms", "value": 4 }
+    ]
+  }
+]

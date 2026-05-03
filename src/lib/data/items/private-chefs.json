@@ -1,0 +1,48 @@
+[
+  {
+    "id": "mediterranean",
+    "name": "Mediterranean Chef",
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 60000,
+    "unit": "service",
+    "specs": [
+      { "key": "courses", "value": "5–7" },
+      { "key": "minGuests", "value": 4 },
+      { "key": "wine_pairing", "value": "yes" }
+    ]
+  },
+  {
+    "id": "asian-fusion",
+    "name": "Asian Fusion Chef",
+    "image": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 70000,
+    "unit": "service",
+    "specs": [
+      { "key": "courses", "value": "6–8" },
+      { "key": "minGuests", "value": 4 },
+      { "key": "wine_pairing", "value": "yes" }
+    ]
+  },
+  {
+    "id": "bbq-grill",
+    "name": "BBQ & Grill Specialist",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 45000,
+    "unit": "service",
+    "specs": [
+      { "key": "courses", "value": "4" },
+      { "key": "minGuests", "value": 6 }
+    ]
+  },
+  {
+    "id": "vegan-plant",
+    "name": "Vegan & Plant-based",
+    "image": "https://images.unsplash.com/photo-1587740896339-96a39f3d6ec0?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 55000,
+    "unit": "service",
+    "specs": [
+      { "key": "courses", "value": "5" },
+      { "key": "minGuests", "value": 4 }
+    ]
+  }
+]

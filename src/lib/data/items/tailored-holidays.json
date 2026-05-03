@@ -1,0 +1,29 @@
+[
+  {
+    "id": "family-retreat",
+    "name": "Family Retreat",
+    "image": "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1200&q=80",
+    "specs": [
+      { "key": "duration", "value": "7 days" },
+      { "key": "guests", "value": "4–8" }
+    ]
+  },
+  {
+    "id": "couples-romance",
+    "name": "Couples Romance",
+    "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
+    "specs": [
+      { "key": "duration", "value": "5 days" },
+      { "key": "guests", "value": 2 }
+    ]
+  },
+  {
+    "id": "festive-energy",
+    "name": "Festive Energy",
+    "image": "https://images.unsplash.com/photo-1545128485-c400e7702796?auto=format&fit=crop&w=1200&q=80",
+    "specs": [
+      { "key": "duration", "value": "8 days" },
+      { "key": "guests", "value": "4–10" }
+    ]
+  }
+]

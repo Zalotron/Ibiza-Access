@@ -1,0 +1,62 @@
+[
+  {
+    "id": "sunseeker-76",
+    "name": "Sunseeker 76",
+    "image": "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 1500000,
+    "unit": "day",
+    "specs": [
+      { "key": "guests", "value": 12 },
+      { "key": "length", "value": "23m" },
+      { "key": "crew", "value": 3 }
+    ]
+  },
+  {
+    "id": "princess-60",
+    "name": "Princess 60",
+    "image": "https://images.unsplash.com/photo-1540946485063-a40da27545f8?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 1000000,
+    "unit": "day",
+    "specs": [
+      { "key": "guests", "value": 10 },
+      { "key": "length", "value": "18m" },
+      { "key": "crew", "value": 2 }
+    ]
+  },
+  {
+    "id": "lagoon-52",
+    "name": "Lagoon 52 Catamaran",
+    "image": "https://images.unsplash.com/photo-1517400508447-f8dd518b86db?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 800000,
+    "unit": "day",
+    "specs": [
+      { "key": "guests", "value": 14 },
+      { "key": "length", "value": "16m" },
+      { "key": "crew", "value": 2 }
+    ]
+  },
+  {
+    "id": "pershing-88",
+    "name": "Pershing 88",
+    "image": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 3500000,
+    "unit": "day",
+    "specs": [
+      { "key": "guests", "value": 12 },
+      { "key": "length", "value": "27m" },
+      { "key": "crew", "value": 4 }
+    ]
+  },
+  {
+    "id": "riva-anniversario",
+    "name": "Riva Anniversario 110",
+    "image": "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 8000000,
+    "unit": "day",
+    "specs": [
+      { "key": "guests", "value": 16 },
+      { "key": "length", "value": "33m" },
+      { "key": "crew", "value": 6 }
+    ]
+  }
+]

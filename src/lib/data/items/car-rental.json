@@ -1,0 +1,49 @@
+[
+  {
+    "id": "compact-yaris",
+    "name": "Toyota Yaris",
+    "image": "https://images.unsplash.com/photo-1549399052-3d3a3b21bd2d?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 7000,
+    "unit": "day",
+    "specs": [
+      { "key": "seats", "value": 5 },
+      { "key": "transmission", "value": "manual" },
+      { "key": "fuel", "value": "petrol" }
+    ]
+  },
+  {
+    "id": "suv-vitara",
+    "name": "Suzuki Vitara",
+    "image": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 9500,
+    "unit": "day",
+    "specs": [
+      { "key": "seats", "value": 5 },
+      { "key": "transmission", "value": "auto" },
+      { "key": "fuel", "value": "petrol" }
+    ]
+  },
+  {
+    "id": "cabrio-fiat500",
+    "name": "Fiat 500 Cabrio",
+    "image": "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 12000,
+    "unit": "day",
+    "specs": [
+      { "key": "seats", "value": 4 },
+      { "key": "transmission", "value": "auto" },
+      { "key": "fuel", "value": "petrol" }
+    ]
+  },
+  {
+    "id": "scooter-pcx125",
+    "name": "Honda PCX 125",
+    "image": "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 4500,
+    "unit": "day",
+    "specs": [
+      { "key": "seats", "value": 2 },
+      { "key": "engine", "value": "125cc" }
+    ]
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "blue-marlin",
+    "name": "Blue Marlin Cala Jondal",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "location": "Cala Jondal",
+    "priceFromCents": 60000,
+    "unit": "booking",
+    "specs": [
+      { "key": "guests", "value": "2–10" },
+      { "key": "vibe", "label": "Daytime party" }
+    ]
+  },
+  {
+    "id": "beachouse",
+    "name": "Beachouse Ibiza",
+    "image": "https://images.unsplash.com/photo-1471919743851-c4df8b6ee133?auto=format&fit=crop&w=1200&q=80",
+    "location": "Playa d'en Bossa",
+    "priceFromCents": 50000,
+    "unit": "booking",
+    "specs": [
+      { "key": "guests", "value": "2–8" },
+      { "key": "vibe", "label": "Mediterranean" }
+    ]
+  },
+  {
+    "id": "nikki-beach",
+    "name": "Nikki Beach",
+    "image": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&q=80",
+    "location": "Santa Eulalia",
+    "priceFromCents": 70000,
+    "unit": "booking",
+    "specs": [
+      { "key": "guests", "value": "2–12" },
+      { "key": "vibe", "label": "Glamour" }
+    ]
+  },
+  {
+    "id": "cotton-beach",
+    "name": "Cotton Beach Club",
+    "image": "https://images.unsplash.com/photo-1530541040348-6dee04faf9b7?auto=format&fit=crop&w=1200&q=80",
+    "location": "Cala Tarida",
+    "priceFromCents": 40000,
+    "unit": "booking",
+    "specs": [
+      { "key": "guests", "value": "2–10" },
+      { "key": "vibe", "label": "Sunset chic" }
+    ]
+  }
+]

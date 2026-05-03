@@ -1,7 +1,9 @@
 import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { services, getService } from "@/lib/data/services";
+import { getServiceItems } from "@/lib/data/service-items";
 import { ServiceDetail } from "@/components/marketing/service-detail";
+import { ServiceItemsGrid } from "@/components/marketing/service-items-grid";
 import { routing } from "@/i18n/routing";
 import type { Locale } from "@/i18n/routing";
 import {
@@ -57,6 +59,7 @@ export default async function ServiceDetailPage({
   const service = getService(slug);
   if (!service) notFound();
   const typedLocale = locale as Locale;
+  const items = getServiceItems(slug);
 
   const serviceLd = {
     "@context": "https://schema.org",
@@ -120,6 +123,7 @@ export default async function ServiceDetailPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
       <ServiceDetail service={service} locale={typedLocale} />
+      <ServiceItemsGrid items={items} locale={typedLocale} />
     </>
   );
 }

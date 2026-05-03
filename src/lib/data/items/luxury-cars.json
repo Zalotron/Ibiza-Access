@@ -1,0 +1,74 @@
+[
+  {
+    "id": "lambo-huracan",
+    "name": "Lamborghini Huracán EVO",
+    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 180000,
+    "unit": "day",
+    "specs": [
+      { "key": "seats", "value": 2 },
+      { "key": "hp", "value": "640" },
+      { "key": "transmission", "value": "auto" }
+    ]
+  },
+  {
+    "id": "ferrari-488",
+    "name": "Ferrari 488 Spider",
+    "image": "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 220000,
+    "unit": "day",
+    "specs": [
+      { "key": "seats", "value": 2 },
+      { "key": "hp", "value": "670" },
+      { "key": "transmission", "value": "auto" }
+    ]
+  },
+  {
+    "id": "porsche-911-turbo-s",
+    "name": "Porsche 911 Turbo S",
+    "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 150000,
+    "unit": "day",
+    "specs": [
+      { "key": "seats", "value": 4 },
+      { "key": "hp", "value": "640" },
+      { "key": "transmission", "value": "auto" }
+    ]
+  },
+  {
+    "id": "mercedes-g-wagon",
+    "name": "Mercedes G-Wagon AMG",
+    "image": "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 80000,
+    "unit": "day",
+    "specs": [
+      { "key": "seats", "value": 5 },
+      { "key": "hp", "value": "585" },
+      { "key": "transmission", "value": "auto" }
+    ]
+  },
+  {
+    "id": "bentley-continental",
+    "name": "Bentley Continental GT",
+    "image": "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 120000,
+    "unit": "day",
+    "specs": [
+      { "key": "seats", "value": 4 },
+      { "key": "hp", "value": "626" },
+      { "key": "transmission", "value": "auto" }
+    ]
+  },
+  {
+    "id": "mclaren-720s",
+    "name": "McLaren 720S",
+    "image": "https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 250000,
+    "unit": "day",
+    "specs": [
+      { "key": "seats", "value": 2 },
+      { "key": "hp", "value": "720" },
+      { "key": "transmission", "value": "auto" }
+    ]
+  }
+]

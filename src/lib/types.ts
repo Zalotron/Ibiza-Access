@@ -48,6 +48,29 @@ export type Inquiry = InquiryInput & {
   createdAt: string;
 };
 
+export type ItemSpec = {
+  /** translation key under items.specs.{key} (e.g. "guests", "bedrooms"). Receives `{value}` for interpolation. */
+  key?: string;
+  /** numeric or text value */
+  value?: string | number;
+  /** optional fallback label if no key is provided (rendered as-is, untranslated) */
+  label?: string;
+};
+
+export type ServiceItem = {
+  id: string;
+  name: string;
+  image: string;
+  location?: string;
+  /** lowest price for the price range, in cents */
+  priceFromCents?: number;
+  /** highest price for the price range, in cents */
+  priceToCents?: number;
+  /** translation key for the unit (week, day, leg, session, table, hour, group) — under items.units.{unit} */
+  unit?: string;
+  specs?: ItemSpec[];
+};
+
 export type Testimonial = {
   id: string;
   name: string;

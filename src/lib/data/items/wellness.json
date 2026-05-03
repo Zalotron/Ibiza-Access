@@ -1,0 +1,46 @@
+[
+  {
+    "id": "deep-tissue",
+    "name": "Deep Tissue Massage",
+    "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 18000,
+    "unit": "session",
+    "specs": [
+      { "key": "duration", "value": "60 min" },
+      { "key": "modality", "label": "Single therapist" }
+    ]
+  },
+  {
+    "id": "private-yoga",
+    "name": "Private Yoga",
+    "image": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 15000,
+    "unit": "session",
+    "specs": [
+      { "key": "duration", "value": "75 min" },
+      { "key": "modality", "label": "Vinyasa or Hatha" }
+    ]
+  },
+  {
+    "id": "holistic",
+    "name": "Holistic Treatment",
+    "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 22000,
+    "unit": "session",
+    "specs": [
+      { "key": "duration", "value": "90 min" },
+      { "key": "modality", "label": "Cranio-sacral" }
+    ]
+  },
+  {
+    "id": "couples-spa",
+    "name": "Couples Spa",
+    "image": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 35000,
+    "unit": "session",
+    "specs": [
+      { "key": "duration", "value": "120 min" },
+      { "key": "modality", "label": "Two therapists" }
+    ]
+  }
+]

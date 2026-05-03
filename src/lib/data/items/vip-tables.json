@@ -1,0 +1,62 @@
+[
+  {
+    "id": "ushuaia",
+    "name": "Ushuaïa Ibiza",
+    "image": "https://images.unsplash.com/photo-1571266028243-e1f9b6d3d1de?auto=format&fit=crop&w=1200&q=80",
+    "location": "Playa d'en Bossa",
+    "priceFromCents": 250000,
+    "unit": "table",
+    "specs": [
+      { "key": "tableSize", "value": "6–10" },
+      { "key": "vibe", "label": "Open-air mainstream" }
+    ]
+  },
+  {
+    "id": "hi-ibiza",
+    "name": "Hï Ibiza",
+    "image": "https://images.unsplash.com/photo-1545128485-c400e7702796?auto=format&fit=crop&w=1200&q=80",
+    "location": "Platja d'en Bossa",
+    "priceFromCents": 280000,
+    "unit": "table",
+    "specs": [
+      { "key": "tableSize", "value": "8–12" },
+      { "key": "vibe", "label": "House & techno" }
+    ]
+  },
+  {
+    "id": "pacha",
+    "name": "Pacha",
+    "image": "https://images.unsplash.com/photo-1583244532610-2a234b29bb31?auto=format&fit=crop&w=1200&q=80",
+    "location": "Marina Botafoch",
+    "priceFromCents": 220000,
+    "unit": "table",
+    "specs": [
+      { "key": "tableSize", "value": "6–10" },
+      { "key": "vibe", "label": "Iconic Ibiza" }
+    ]
+  },
+  {
+    "id": "dc10",
+    "name": "DC-10",
+    "image": "https://images.unsplash.com/photo-1574391884720-bbc049ec09ad?auto=format&fit=crop&w=1200&q=80",
+    "location": "Sant Jordi",
+    "priceFromCents": 180000,
+    "unit": "table",
+    "specs": [
+      { "key": "tableSize", "value": "6–8" },
+      { "key": "vibe", "label": "Underground house" }
+    ]
+  },
+  {
+    "id": "amnesia",
+    "name": "Amnesia",
+    "image": "https://images.unsplash.com/photo-1571266028243-e1f9b6d3d1de?auto=format&fit=crop&w=1200&q=80",
+    "location": "Sant Rafel",
+    "priceFromCents": 240000,
+    "unit": "table",
+    "specs": [
+      { "key": "tableSize", "value": "8–12" },
+      { "key": "vibe", "label": "Two-room legend" }
+    ]
+  }
+]

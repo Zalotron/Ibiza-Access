@@ -1,0 +1,35 @@
+[
+  {
+    "id": "hangover-relief",
+    "name": "Hangover Relief Drip",
+    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 25000,
+    "unit": "session",
+    "specs": [
+      { "key": "duration", "value": "45 min" },
+      { "key": "formula", "label": "Saline + B-complex + anti-nausea" }
+    ]
+  },
+  {
+    "id": "energy-boost",
+    "name": "Energy Boost (Myers' Cocktail)",
+    "image": "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 28000,
+    "unit": "session",
+    "specs": [
+      { "key": "duration", "value": "60 min" },
+      { "key": "formula", "label": "B-complex + magnesium + C" }
+    ]
+  },
+  {
+    "id": "immune-defense",
+    "name": "Immune Defense",
+    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80",
+    "priceFromCents": 32000,
+    "unit": "session",
+    "specs": [
+      { "key": "duration", "value": "60 min" },
+      { "key": "formula", "label": "High-dose C + zinc + glutathione" }
+    ]
+  }
+]

@@ -146,7 +146,7 @@ export function HeroCarousel() {
         type="button"
         onClick={() => emblaApi?.scrollPrev()}
         aria-label="Previous slide"
-        className="group/prev absolute inset-y-0 left-0 z-20 w-32 sm:w-44 lg:w-56"
+        className="group/prev absolute inset-y-0 left-0 z-20 w-64 sm:w-[22rem] lg:w-[28rem]"
       >
         <div className="absolute inset-0 -translate-x-full transition-transform duration-default ease-default group-hover/prev:translate-x-0 group-focus-visible/prev:translate-x-0">
           <div
@@ -161,7 +161,7 @@ export function HeroCarousel() {
         type="button"
         onClick={() => emblaApi?.scrollNext()}
         aria-label="Next slide"
-        className="group/next absolute inset-y-0 right-0 z-20 w-32 sm:w-44 lg:w-56"
+        className="group/next absolute inset-y-0 right-0 z-20 w-64 sm:w-[22rem] lg:w-[28rem]"
       >
         <div className="absolute inset-0 translate-x-full transition-transform duration-default ease-default group-hover/next:translate-x-0 group-focus-visible/next:translate-x-0">
           <div

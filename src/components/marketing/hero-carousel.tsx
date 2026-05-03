@@ -9,6 +9,7 @@ import { Link } from "@/i18n/navigation";
 import { ArrowRight, ArrowDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { MOTION_CURVE, MOTION_DURATION_S } from "@/lib/motion";
 
 const SLIDES = [
   {
@@ -95,8 +96,8 @@ export function HeroCarousel() {
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-xs uppercase tracking-[0.32em] text-accent"
+          transition={{ duration: MOTION_DURATION_S, ease: MOTION_CURVE, delay: 0.1 }}
+          className="text-xs uppercase tracking-[0.32em] text-accent text-shadow-photo"
         >
           {t("heroEyebrow")}
         </motion.p>
@@ -105,7 +106,7 @@ export function HeroCarousel() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-          className="font-display mt-6 max-w-4xl text-balance text-5xl leading-[1.05] text-white drop-shadow-[0_2px_24px_rgba(0,0,0,0.35)] sm:text-7xl lg:text-8xl"
+          className="font-display mt-6 max-w-4xl text-balance text-5xl leading-[1.05] text-white text-shadow-photo sm:text-7xl lg:text-8xl"
         >
           {t("heroTitle")}
         </motion.h1>
@@ -114,7 +115,7 @@ export function HeroCarousel() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.55 }}
-          className="mt-8 max-w-xl text-pretty text-base text-white/90 drop-shadow-[0_1px_12px_rgba(0,0,0,0.4)] sm:text-lg"
+          className="mt-8 max-w-xl text-pretty text-base text-white/90 text-shadow-photo sm:text-lg"
         >
           {t("heroSubtitle")}
         </motion.p>
@@ -148,7 +149,7 @@ export function HeroCarousel() {
         className="group/prev absolute inset-y-0 left-0 z-20 w-20 sm:w-24 lg:w-28"
       >
         <div
-          className="absolute inset-0 flex -translate-x-full items-center justify-center text-white backdrop-blur-md transition-transform duration-200 ease-out group-hover/prev:translate-x-0 group-focus-visible/prev:translate-x-0 [background:linear-gradient(to_bottom,transparent_0%,rgba(0,0,0,0.5)_30%,rgba(0,0,0,0.5)_70%,transparent_100%)]"
+          className="absolute inset-0 flex -translate-x-full items-center justify-center text-white backdrop-blur-md transition-transform duration-default ease-default group-hover/prev:translate-x-0 group-focus-visible/prev:translate-x-0 [background:linear-gradient(to_bottom,transparent_0%,rgba(0,0,0,0.25)_30%,rgba(0,0,0,0.25)_70%,transparent_100%)]"
         >
           <ChevronLeft className="h-7 w-7" aria-hidden="true" />
         </div>
@@ -160,7 +161,7 @@ export function HeroCarousel() {
         className="group/next absolute inset-y-0 right-0 z-20 w-20 sm:w-24 lg:w-28"
       >
         <div
-          className="absolute inset-0 flex translate-x-full items-center justify-center text-white backdrop-blur-md transition-transform duration-200 ease-out group-hover/next:translate-x-0 group-focus-visible/next:translate-x-0 [background:linear-gradient(to_bottom,transparent_0%,rgba(0,0,0,0.5)_30%,rgba(0,0,0,0.5)_70%,transparent_100%)]"
+          className="absolute inset-0 flex translate-x-full items-center justify-center text-white backdrop-blur-md transition-transform duration-default ease-default group-hover/next:translate-x-0 group-focus-visible/next:translate-x-0 [background:linear-gradient(to_bottom,transparent_0%,rgba(0,0,0,0.25)_30%,rgba(0,0,0,0.25)_70%,transparent_100%)]"
         >
           <ChevronRight className="h-7 w-7" aria-hidden="true" />
         </div>
@@ -187,7 +188,7 @@ export function HeroCarousel() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.4, duration: 1 }}
-        className="pointer-events-none absolute right-6 bottom-6 z-10 hidden flex-col items-center gap-2 text-white/60 sm:flex"
+        className="pointer-events-none absolute right-6 bottom-6 z-10 hidden flex-col items-center gap-2 text-white/70 text-shadow-photo sm:flex"
       >
         <span className="text-[10px] uppercase tracking-[0.32em]">
           {t("scroll")}

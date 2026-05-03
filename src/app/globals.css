@@ -21,6 +21,11 @@
   --radius-lg: 0.5rem;
   --radius-xl: 0.75rem;
   --radius-2xl: 1rem;
+
+  --duration-default: 300ms;
+  --ease-default: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --text-shadow-photo: 0 0 20px rgba(0, 0, 0, 1);
 }
 
 @layer base {

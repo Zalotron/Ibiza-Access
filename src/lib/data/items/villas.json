@@ -2,7 +2,7 @@
   {
     "id": "can-retreat",
     "name": "Can Retreat",
-    "image": "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80",
+    "image": "/services/items/villas/can-retreat.jpg",
     "location": "Santa Eulalia",
     "priceFromCents": 1020000,
     "priceToCents": 2270000,
@@ -14,12 +14,12 @@
     ]
   },
   {
-    "id": "casa-vedra",
-    "name": "Casa Vedrà",
-    "image": "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=1200&q=80",
-    "location": "Es Cubells",
-    "priceFromCents": 1800000,
-    "priceToCents": 3500000,
+    "id": "villa-synchronicity",
+    "name": "Villa Synchronicity",
+    "image": "/services/items/villas/villa-synchronicity.jpeg",
+    "location": "S'Estanyol",
+    "priceFromCents": 9000000,
+    "priceToCents": 12000000,
     "unit": "week",
     "specs": [
       { "key": "guests", "value": 10 },
@@ -28,58 +28,352 @@
     ]
   },
   {
-    "id": "villa-aurora",
-    "name": "Villa Aurora",
-    "image": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80",
-    "location": "Cap Martinet",
-    "priceFromCents": 800000,
-    "priceToCents": 1400000,
-    "unit": "week",
-    "specs": [
-      { "key": "guests", "value": 8 },
-      { "key": "bedrooms", "value": 4 },
-      { "key": "bathrooms", "value": 5 }
-    ]
-  },
-  {
-    "id": "cala-jondal-house",
-    "name": "Cala Jondal House",
-    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
-    "location": "Cala Jondal",
-    "priceFromCents": 1200000,
-    "priceToCents": 2400000,
+    "id": "villa-sekhmet",
+    "name": "Villa Sekhmet",
+    "image": "/services/items/villas/villa-sekhmet.jpg",
+    "location": "Cala Tarida",
+    "priceFromCents": 1210000,
+    "priceToCents": 3300000,
     "unit": "week",
     "specs": [
       { "key": "guests", "value": 12 },
+      { "key": "bedrooms", "value": 6 },
+      { "key": "bathrooms", "value": 6 }
+    ]
+  },
+  {
+    "id": "villa-anat",
+    "name": "Villa Anat",
+    "image": "/services/items/villas/villa-anat.jpg",
+    "location": "Benirrás",
+    "priceFromCents": 2180000,
+    "priceToCents": 3600000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 10 },
+      { "key": "bedrooms", "value": 5 },
+      { "key": "bathrooms", "value": 4 }
+    ]
+  },
+  {
+    "id": "can-solara",
+    "name": "Can Solara",
+    "image": "/services/items/villas/can-solara.jpg",
+    "location": "Ibiza",
+    "priceFromCents": 5500000,
+    "priceToCents": 9500000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 16 },
       { "key": "bedrooms", "value": 6 },
       { "key": "bathrooms", "value": 7 }
     ]
   },
   {
-    "id": "sa-pedrera",
-    "name": "Sa Pedrera",
-    "image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80",
-    "location": "Benirràs",
-    "priceFromCents": 2200000,
-    "priceToCents": 4200000,
+    "id": "villa-guinevere",
+    "name": "Villa Guinevere",
+    "image": "/services/items/villas/villa-guinevere.jpg",
+    "location": "St Gertrudis",
+    "priceFromCents": 1954000,
+    "priceToCents": 4300000,
     "unit": "week",
     "specs": [
-      { "key": "guests", "value": 16 },
-      { "key": "bedrooms", "value": 8 },
-      { "key": "bathrooms", "value": 9 }
+      { "key": "guests", "value": 9 },
+      { "key": "bedrooms", "value": 5 },
+      { "key": "bathrooms", "value": 5 }
     ]
   },
   {
-    "id": "casa-talamanca",
-    "name": "Casa Talamanca",
-    "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
-    "location": "Talamanca",
-    "priceFromCents": 600000,
-    "priceToCents": 1100000,
+    "id": "villa-alma",
+    "name": "Villa Alma",
+    "image": "/services/items/villas/villa-alma.gif",
+    "location": "Playa Aguas Blancas",
+    "priceFromCents": 3500000,
+    "priceToCents": 7000000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 14 },
+      { "key": "bedrooms", "value": 6 },
+      { "key": "bathrooms", "value": 7 }
+    ]
+  },
+  {
+    "id": "villa-heaven",
+    "name": "Villa Heaven",
+    "image": "/services/items/villas/villa-heaven.jpg",
+    "location": "Cap Martinet",
+    "priceFromCents": 3600000,
+    "priceToCents": 11400000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 12 },
+      { "key": "bedrooms", "value": 6 },
+      { "key": "bathrooms", "value": 5 }
+    ]
+  },
+  {
+    "id": "villa-bliss",
+    "name": "Villa Bliss",
+    "image": "/services/items/villas/villa-bliss.jpg",
+    "location": "Santa Eulalia",
+    "priceFromCents": 1095000,
+    "priceToCents": 3540000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 10 },
+      { "key": "bedrooms", "value": 5 },
+      { "key": "bathrooms", "value": 5 }
+    ]
+  },
+  {
+    "id": "villa-serenity",
+    "name": "Villa Serenity",
+    "image": "/services/items/villas/villa-serenity.jpg",
+    "location": "San Jordi",
+    "priceFromCents": 1176000,
+    "priceToCents": 1596000,
     "unit": "week",
     "specs": [
       { "key": "guests", "value": 6 },
       { "key": "bedrooms", "value": 3 },
+      { "label": "2.5 baths" }
+    ]
+  },
+  {
+    "id": "villa-cala-comte",
+    "name": "Villa Cala Comte",
+    "image": "/services/items/villas/villa-cala-comte.jpg",
+    "location": "Cala Conta",
+    "priceFromCents": 1400000,
+    "priceToCents": 3500000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 12 },
+      { "key": "bedrooms", "value": 6 },
+      { "key": "bathrooms", "value": 9 }
+    ]
+  },
+  {
+    "id": "villa-isis",
+    "name": "Villa Isis",
+    "image": "/services/items/villas/villa-isis.jpg",
+    "location": "Sa Caleta",
+    "priceFromCents": 3500000,
+    "priceToCents": 8890000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 12 },
+      { "key": "bedrooms", "value": 6 },
+      { "key": "bathrooms", "value": 6 }
+    ]
+  },
+  {
+    "id": "villa-mercurio",
+    "name": "Villa Mercurio",
+    "image": "/services/items/villas/villa-mercurio.jpg",
+    "location": "Es Cubells",
+    "priceFromCents": 2500000,
+    "priceToCents": 3630000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 8 },
+      { "key": "bedrooms", "value": 4 },
+      { "key": "bathrooms", "value": 6 }
+    ]
+  },
+  {
+    "id": "villa-aine",
+    "name": "Villa Aine",
+    "image": "/services/items/villas/villa-aine.jpg",
+    "location": "Vista Alegre",
+    "priceFromCents": 3150000,
+    "priceToCents": 8660000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 12 },
+      { "key": "bedrooms", "value": 6 },
+      { "key": "bathrooms", "value": 6 }
+    ]
+  },
+  {
+    "id": "villa-elephant",
+    "name": "Villa Elephant",
+    "image": "/services/items/villas/villa-elephant.jpg",
+    "location": "Santa Eulalia",
+    "priceFromCents": 1400000,
+    "priceToCents": 3300000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 18 },
+      { "key": "bedrooms", "value": 6 },
+      { "key": "bathrooms", "value": 9 }
+    ]
+  },
+  {
+    "id": "villa-amaterasu",
+    "name": "Villa Amaterasu",
+    "image": "/services/items/villas/villa-amaterasu.jpg",
+    "location": "Roca Lisa",
+    "priceFromCents": 2420000,
+    "priceToCents": 4235000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 12 },
+      { "key": "bedrooms", "value": 6 },
+      { "key": "bathrooms", "value": 5 }
+    ]
+  },
+  {
+    "id": "villa-kali",
+    "name": "Villa Kali",
+    "image": "/services/items/villas/villa-kali.jpg",
+    "location": "San Jose de Sa Talaia",
+    "priceFromCents": 1300000,
+    "priceToCents": 2540000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 6 },
+      { "key": "bedrooms", "value": 3 },
+      { "key": "bathrooms", "value": 3 }
+    ]
+  },
+  {
+    "id": "villa-gea",
+    "name": "Villa Gea",
+    "image": "/services/items/villas/villa-gea.jpg",
+    "location": "San Mateo, St Gertrudis",
+    "priceFromCents": 1800000,
+    "priceToCents": 2200000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 10 },
+      { "key": "bedrooms", "value": 5 },
+      { "key": "bathrooms", "value": 5 }
+    ]
+  },
+  {
+    "id": "villa-horus",
+    "name": "Villa Horus",
+    "image": "/services/items/villas/villa-horus.jpg",
+    "location": "Cala Conta",
+    "priceFromCents": 920000,
+    "priceToCents": 2000000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 10 },
+      { "key": "bedrooms", "value": 5 },
+      { "key": "bathrooms", "value": 5 }
+    ]
+  },
+  {
+    "id": "villa-hathor",
+    "name": "Villa Hathor",
+    "image": "/services/items/villas/villa-hathor.jpg",
+    "location": "Es Cubells",
+    "priceFromCents": 5346000,
+    "priceToCents": 6415000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 10 },
+      { "key": "bedrooms", "value": 5 },
+      { "key": "bathrooms", "value": 10 }
+    ]
+  },
+  {
+    "id": "villa-amonet",
+    "name": "Villa Amonet",
+    "image": "/services/items/villas/villa-amonet.jpg",
+    "location": "Cap Martinet",
+    "priceFromCents": 2000000,
+    "priceToCents": 4795000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 14 },
+      { "key": "bedrooms", "value": 6 },
+      { "key": "bathrooms", "value": 8 }
+    ]
+  },
+  {
+    "id": "villa-mut",
+    "name": "Villa Mut",
+    "image": "/services/items/villas/villa-mut.jpg",
+    "location": "Jesús",
+    "priceFromCents": 1540000,
+    "priceToCents": 2862800,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 14 },
+      { "key": "bedrooms", "value": 6 },
+      { "key": "bathrooms", "value": 9 }
+    ]
+  },
+  {
+    "id": "villa-saga",
+    "name": "Villa Saga",
+    "image": "/services/items/villas/villa-saga.jpg",
+    "location": "Cala Longa",
+    "priceFromCents": 4200000,
+    "priceToCents": 6203600,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 10 },
+      { "key": "bedrooms", "value": 5 },
+      { "key": "bathrooms", "value": 5 }
+    ]
+  },
+  {
+    "id": "villa-can-payes",
+    "name": "Villa Can Payes",
+    "image": "/services/items/villas/villa-can-payes.jpg",
+    "location": "Santa Eulalia",
+    "priceFromCents": 956000,
+    "priceToCents": 1900000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 16 },
+      { "key": "bedrooms", "value": 6 },
+      { "key": "bathrooms", "value": 10 }
+    ]
+  },
+  {
+    "id": "villa-jord",
+    "name": "Villa Jord",
+    "image": "/services/items/villas/villa-jord.jpg",
+    "location": "Jesús",
+    "priceFromCents": 1540000,
+    "priceToCents": 2860000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 14 },
+      { "key": "bedrooms", "value": 6 },
+      { "key": "bathrooms", "value": 9 }
+    ]
+  },
+  {
+    "id": "villa-can-b",
+    "name": "Villa Can B",
+    "image": "/services/items/villas/villa-can-b.jpg",
+    "location": "Cap Martinet",
+    "priceFromCents": 2120000,
+    "priceToCents": 3000000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 10 },
+      { "key": "bedrooms", "value": 5 },
+      { "key": "bathrooms", "value": 6 }
+    ]
+  },
+  {
+    "id": "villa-apolo",
+    "name": "Villa Apolo",
+    "image": "/services/items/villas/villa-apolo.jpg",
+    "location": "Cap Martinet",
+    "priceFromCents": 450000,
+    "priceToCents": 1600000,
+    "unit": "week",
+    "specs": [
+      { "key": "guests", "value": 10 },
+      { "key": "bedrooms", "value": 5 },
       { "key": "bathrooms", "value": 4 }
     ]
   }

@@ -2,7 +2,6 @@
 
 import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import { motion } from "motion/react";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { Check, ArrowRight } from "lucide-react";
@@ -41,38 +40,18 @@ function ConfirmationInner({ locale }: { locale: Locale }) {
 
   return (
     <div className="container-tight pt-40 pb-32 text-center">
-      <motion.div
-        initial={{ scale: 0, rotate: -180 }}
-        animate={{ scale: 1, rotate: 0 }}
-        transition={{ type: "spring", duration: 0.8, delay: 0.2 }}
-        className="mx-auto grid h-20 w-20 place-items-center rounded-full bg-accent text-accent-foreground"
-      >
+      <div className="mx-auto grid h-20 w-20 place-items-center rounded-full bg-accent text-accent-foreground">
         <Check className="h-10 w-10" />
-      </motion.div>
-      <motion.h1
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.4 }}
-        className="font-display mt-10 text-5xl text-foreground sm:text-7xl"
-      >
+      </div>
+      <h1 className="font-display mt-10 text-5xl text-foreground sm:text-7xl">
         {t("title")}
-      </motion.h1>
-      <motion.p
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.5 }}
-        className="mx-auto mt-6 max-w-md text-pretty text-foreground/80"
-      >
+      </h1>
+      <p className="mx-auto mt-6 max-w-md text-pretty text-foreground/80">
         {t("subtitle")}
-      </motion.p>
+      </p>
 
       {inquiry && (
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.7 }}
-          className="mx-auto mt-12 max-w-md rounded-md border border-foreground/10 bg-card p-8 text-left"
-        >
+        <div className="mx-auto mt-12 max-w-md rounded-md border border-foreground/10 bg-card p-8 text-left">
           <div className="flex items-center justify-between">
             <p className="text-xs uppercase tracking-[0.28em] text-foreground/50">
               {t("reference")}
@@ -104,15 +83,10 @@ function ConfirmationInner({ locale }: { locale: Locale }) {
               {formatPrice(inquiry.totalCents, locale)}
             </span>
           </div>
-        </motion.div>
+        </div>
       )}
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.7, delay: 1 }}
-        className="mt-12"
-      >
+      <div className="mt-12">
         <Link
           href="/"
           className={`${buttonVariants({ variant: "outline" })} group`}
@@ -120,7 +94,7 @@ function ConfirmationInner({ locale }: { locale: Locale }) {
           {tCta("back")}
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
         </Link>
-      </motion.div>
+      </div>
     </div>
   );
 }

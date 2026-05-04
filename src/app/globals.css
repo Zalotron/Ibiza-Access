@@ -14,7 +14,8 @@
   --color-primary-foreground: oklch(0.99 0.003 95);
 
   --font-sans: var(--font-sans);
-  --font-display: var(--font-display);
+  --font-display: var(--font-sans);
+  --font-serif: var(--font-serif);
 
   --radius-sm: 0.1875rem;
   --radius-md: 0.3125rem;
@@ -25,7 +26,12 @@
   --duration-default: 300ms;
   --ease-default: cubic-bezier(0.65, 0, 0.35, 1);
 
-  --text-shadow-photo: 0 0 20px rgba(0, 0, 0, 1);
+  /* PrimaryCta — snappier than default. Fast acceleration in, gentle slow-down out. */
+  --duration-cta: 220ms;
+  --ease-cta: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --text-shadow-photo: var(--parallax-x, 0px) var(--parallax-y, 0px) 20px rgba(0, 0, 0, 1);
+  --shadow-photo: var(--parallax-x, 0px) var(--parallax-y, 0px) 12px rgba(0, 0, 0, 0.6);
 }
 
 @layer base {
@@ -41,7 +47,6 @@
 
   body {
     font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
-    font-feature-settings: "ss01", "cv11";
     background: var(--color-background);
     color: var(--color-foreground);
   }
@@ -50,7 +55,7 @@
   h2,
   h3,
   h4 {
-    font-family: var(--font-display), Georgia, serif;
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
     font-weight: 400;
     letter-spacing: -0.01em;
   }

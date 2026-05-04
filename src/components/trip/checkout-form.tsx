@@ -6,7 +6,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useRouter } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
-import { motion } from "motion/react";
 import { Input, Textarea, Label } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useTripStore, useTripTotal, useTripDeposit } from "@/lib/store/trip-store";
@@ -61,11 +60,7 @@ export function CheckoutForm({ locale }: { locale: Locale }) {
 
   return (
     <div className="container-tight grid gap-12 pt-32 pb-32 lg:grid-cols-[1fr_360px]">
-      <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
+      <div>
         <p className="text-xs uppercase tracking-[0.32em] text-accent">
           {t("eyebrow")}
         </p>
@@ -145,7 +140,7 @@ export function CheckoutForm({ locale }: { locale: Locale }) {
             )}
           </Button>
         </form>
-      </motion.div>
+      </div>
 
       <aside className="lg:sticky lg:top-32 lg:self-start">
         <div className="rounded-md border border-foreground/10 bg-card p-8">

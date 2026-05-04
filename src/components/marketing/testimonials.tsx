@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { testimonials } from "@/lib/data/testimonials";
@@ -34,15 +33,9 @@ export function Testimonials({ locale }: { locale: Locale }) {
   return (
     <section className="container-tight py-24 sm:py-32">
       <div className="flex items-end justify-between gap-6">
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="font-display max-w-3xl text-balance text-3xl text-foreground sm:text-5xl"
-        >
+        <p className="font-display max-w-3xl text-balance text-3xl text-foreground sm:text-5xl">
           {t("testimonialsEyebrow")}
-        </motion.p>
+        </p>
         <div className="flex gap-2">
           <button
             type="button"

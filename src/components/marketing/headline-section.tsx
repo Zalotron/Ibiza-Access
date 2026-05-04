@@ -4,9 +4,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
-import { ArrowRight } from "lucide-react";
-import { buttonVariants } from "@/components/ui/button";
+import { PrimaryCtaLink } from "@/components/ui/primary-cta";
 
 export function HeadlineSection() {
   const t = useTranslations("home");
@@ -22,16 +20,13 @@ export function HeadlineSection() {
       ref={ref}
       className="relative overflow-hidden py-24 sm:py-32 lg:py-40"
     >
-      <div className="container-tight grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
-        <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="relative lg:col-span-5"
-        >
-          <div className="relative aspect-[4/5] overflow-hidden rounded-md bg-muted">
-            <motion.div style={{ y: imgY }} className="absolute -inset-y-10 inset-x-0">
+      <div className="container-tight grid items-stretch gap-12 lg:grid-cols-12 lg:gap-16">
+        <div className="relative lg:col-span-5">
+          <div className="relative h-full min-h-[60vh] overflow-hidden rounded-md bg-muted lg:min-h-0">
+            <motion.div
+              style={{ y: imgY }}
+              className="absolute -inset-y-12 inset-x-0"
+            >
               <Image
                 src="https://ibiza-access.com/wp-content/uploads/2025/04/photo-home-page-new-.jpg"
                 alt="Ibiza Access concierge experience"
@@ -42,60 +37,37 @@ export function HeadlineSection() {
             </motion.div>
           </div>
           <div className="absolute -inset-x-4 -bottom-4 -z-10 h-2/3 rounded-md bg-accent/15 blur-3xl" />
-        </motion.div>
+        </div>
 
         <div className="lg:col-span-7">
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-xs uppercase tracking-[0.32em] text-accent"
-          >
+          <p className="text-xs uppercase tracking-[0.32em] text-accent">
             {t("headlineEyebrow")}
-          </motion.p>
+          </p>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-display mt-5 text-balance text-4xl leading-[1.05] text-foreground sm:text-5xl lg:text-6xl"
-          >
+          <h2 className="font-serif mt-5 text-3xl leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">
             {t("headlineTitleLead")}{" "}
-            <span className="italic text-accent">{t("headlineTitleAccent")}</span>{" "}
+            <span className="italic text-accent">
+              {t("headlineTitleAccent")}
+            </span>{" "}
             {t("headlineTitleConnector")}
-            <br className="hidden sm:block" />
+            <br />
             {t("headlineTitleSecond")}{" "}
-            <span className="italic text-accent">{t("headlineTitleAccent2")}</span>
-          </motion.h2>
+            <span className="italic text-accent">
+              {t("headlineTitleAccent2")}
+            </span>
+          </h2>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-10 space-y-5 text-base leading-relaxed text-foreground/75 sm:text-lg"
-          >
+          <div className="mt-10 space-y-5 text-base leading-relaxed text-foreground/75 sm:text-lg">
             <p>{t("headlineParagraph1")}</p>
-            <p>{t("headlineParagraph2")}</p>
-          </motion.div>
+            <p>
+              {t("headlineParagraph2")}{" "}
+              <em className="italic text-foreground">{t("headlineTagline")}</em>
+            </p>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="mt-10"
-          >
-            <Link
-              href="/services"
-              className={`${buttonVariants({ variant: "accent", size: "lg" })} group`}
-            >
-              {t("headlineCta")}
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </Link>
-          </motion.div>
+          <div className="mt-10">
+            <PrimaryCtaLink href="/services">{t("headlineCta")}</PrimaryCtaLink>
+          </div>
         </div>
       </div>
     </section>

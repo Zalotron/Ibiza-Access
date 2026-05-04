@@ -1,13 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 import { MapPin, Plus, Check } from "lucide-react";
 import type { ServiceItem, ItemSpec } from "@/lib/types";
 import type { Locale } from "@/i18n/routing";
 import { formatPrice, cn } from "@/lib/utils";
-import { MOTION_CURVE, MOTION_DURATION_S } from "@/lib/motion";
 import { Button } from "@/components/ui/button";
 import {
   useIsItemInTrip,
@@ -40,12 +38,10 @@ function ItemCard({
   item,
   serviceSlug,
   locale,
-  index,
 }: {
   item: ServiceItem;
   serviceSlug: string;
   locale: Locale;
-  index: number;
 }) {
   const tItems = useTranslations("items");
   const tUnits = useTranslations("items.units");
@@ -75,15 +71,7 @@ function ItemCard({
   };
 
   return (
-    <motion.li
-      initial={{ opacity: 0, y: 28 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{
-        duration: MOTION_DURATION_S * 2,
-        ease: MOTION_CURVE,
-        delay: Math.min(index * 0.06, 0.4),
-      }}
+    <li
       className={cn(
         "group flex flex-col overflow-hidden rounded-md border border-foreground/10 bg-card transition-shadow duration-default ease-default hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)]",
         inTrip && "ring-1 ring-accent",
@@ -161,7 +149,7 @@ function ItemCard({
           </Button>
         </div>
       </div>
-    </motion.li>
+    </li>
   );
 }
 
@@ -180,24 +168,17 @@ export function ServiceItemsGrid({
 
   return (
     <section className="container-tight py-20 sm:py-28">
-      <motion.h2
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: MOTION_DURATION_S * 2, ease: MOTION_CURVE }}
-        className="font-display text-3xl text-foreground sm:text-4xl"
-      >
+      <h2 className="font-display text-3xl text-foreground sm:text-4xl">
         {tItems("options")}
-      </motion.h2>
+      </h2>
 
       <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {items.map((item, idx) => (
+        {items.map((item) => (
           <ItemCard
             key={item.id}
             item={item}
             serviceSlug={serviceSlug}
             locale={locale}
-            index={idx}
           />
         ))}
       </ul>

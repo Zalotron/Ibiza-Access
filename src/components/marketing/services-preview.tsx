@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ServiceCard } from "./service-card";
@@ -31,24 +30,12 @@ export function ServicesPreview({ locale }: { locale: Locale }) {
     <section className="container-tight relative py-24 sm:py-32">
       <div className="flex flex-wrap items-end justify-between gap-6">
         <div className="max-w-2xl">
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-xs uppercase tracking-[0.32em] text-accent"
-          >
+          <p className="text-xs uppercase tracking-[0.32em] text-accent">
             {t("servicesEyebrow")}
-          </motion.p>
-          <motion.h2
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-display mt-4 text-4xl text-balance text-foreground sm:text-5xl lg:text-6xl"
-          >
+          </p>
+          <h2 className="font-display mt-4 text-4xl text-balance text-foreground sm:text-5xl lg:text-6xl">
             {t("servicesTitle")}
-          </motion.h2>
+          </h2>
         </div>
         <Link
           href="/services"

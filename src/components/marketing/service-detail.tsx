@@ -58,22 +58,12 @@ export function ServiceDetail({
           <ArrowLeft className="h-3 w-3" aria-hidden="true" />
           {tCta("back")}
         </Link>
-        <motion.h1
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="font-display mt-6 max-w-4xl text-balance text-5xl leading-[1.05] text-white text-shadow-photo sm:text-7xl lg:text-8xl"
-        >
+        <h1 className="font-display mt-6 max-w-4xl text-balance text-5xl leading-[1.05] text-white text-shadow-photo sm:text-7xl lg:text-8xl">
           {service.title[locale]}
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.3 }}
-          className="mt-6 max-w-2xl text-pretty text-base text-white/90 text-shadow-photo sm:text-lg"
-        >
+        </h1>
+        <p className="mt-6 max-w-2xl text-pretty text-base text-white/90 text-shadow-photo sm:text-lg">
           {service.tagline[locale]}
-        </motion.p>
+        </p>
       </div>
     </section>
   );

@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
-import { motion } from "motion/react";
 import { Plus, Check } from "lucide-react";
 import type { Service } from "@/lib/types";
 import type { Locale } from "@/i18n/routing";
@@ -13,7 +12,6 @@ import { formatPrice, cn } from "@/lib/utils";
 export function ServiceCard({
   service,
   locale,
-  index = 0,
   className,
 }: {
   service: Service;
@@ -44,15 +42,7 @@ export function ServiceCard({
   };
 
   return (
-    <motion.article
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{
-        duration: 0.7,
-        delay: Math.min(index * 0.06, 0.4),
-        ease: [0.22, 1, 0.36, 1],
-      }}
+    <article
       className={cn("group relative overflow-hidden rounded-md", className)}
     >
       <Link href={`/services/${service.slug}`} className="block">
@@ -104,6 +94,6 @@ export function ServiceCard({
       {inTrip && (
         <div className="pointer-events-none absolute inset-0 rounded-md ring-2 ring-accent" />
       )}
-    </motion.article>
+    </article>
   );
 }

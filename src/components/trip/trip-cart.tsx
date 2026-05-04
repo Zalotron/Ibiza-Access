@@ -4,11 +4,11 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { ArrowRight, Minus, Plus, Trash2, Calendar, Users } from "lucide-react";
+import { Trash2, Calendar, Users } from "lucide-react";
 import { useTripStore, useTripTotal, useTripDeposit } from "@/lib/store/trip-store";
 import { services } from "@/lib/data/services";
 import { formatPrice, cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
+import { PrimaryCtaLink } from "@/components/ui/primary-cta";
 import type { Locale } from "@/i18n/routing";
 
 export function TripCart({ locale }: { locale: Locale }) {
@@ -41,13 +41,9 @@ export function TripCart({ locale }: { locale: Locale }) {
         <p className="mx-auto mt-4 max-w-md text-foreground/70">
           {tTrip("emptyHint")}
         </p>
-        <Link
-          href="/services"
-          className={cn(buttonVariants({ variant: "accent", size: "lg" }), "mt-10")}
-        >
+        <PrimaryCtaLink href="/services" className="mt-10">
           {tCta("viewServices")}
-          <ArrowRight className="h-4 w-4" />
-        </Link>
+        </PrimaryCtaLink>
       </div>
     );
   }
@@ -70,8 +66,6 @@ export function TripCart({ locale }: { locale: Locale }) {
                 <motion.li
                   key={item.id}
                   layout
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, x: -40 }}
                   transition={{ duration: 0.3 }}
                   className="group relative flex gap-5 rounded-md border border-foreground/10 bg-card p-4 sm:p-6"
@@ -173,16 +167,9 @@ export function TripCart({ locale }: { locale: Locale }) {
                 </p>
               </div>
             </div>
-            <Link
-              href="/trip/checkout"
-              className={cn(
-                buttonVariants({ variant: "accent", size: "lg" }),
-                "mt-8 w-full",
-              )}
-            >
+            <PrimaryCtaLink href="/trip/checkout" className="mt-8 w-full">
               {tCta("checkout")}
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+            </PrimaryCtaLink>
             <p className="mt-4 text-xs leading-relaxed text-foreground/50">
               {tTrip("estimateNotice")}
             </p>

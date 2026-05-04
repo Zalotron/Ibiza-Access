@@ -46,7 +46,7 @@ export function ServiceCard({
 
       {/* Bottom-anchored content stack — title stays in view; description
           expands on hover, pushing the title upward to make room. */}
-      <div className="absolute inset-x-0 bottom-0 flex flex-col bg-black/35 px-3 py-2">
+      <div className="absolute inset-x-0 bottom-0 flex flex-col bg-black/15 px-3 py-2 backdrop-blur-sm">
         <h3 className="font-display text-2xl text-white [text-shadow:0_2px_6px_rgba(0,0,0,0.85),0_0_24px_rgba(0,0,0,0.7)]">
           {titulo}
         </h3>

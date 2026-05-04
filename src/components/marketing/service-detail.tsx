@@ -59,7 +59,7 @@ export function ServiceDetail({
           <ArrowLeft className="h-3 w-3" aria-hidden="true" />
           {tCta("back")}
         </Link>
-        <h1 className="font-display mt-6 max-w-4xl text-balance text-5xl leading-[1.05] text-white text-shadow-photo sm:text-7xl lg:text-8xl">
+        <h1 className="font-display mt-6 max-w-4xl text-balance text-4xl leading-[1.05] text-white text-shadow-photo sm:text-6xl lg:text-8xl">
           {service.title[locale]}
         </h1>
         <p className="mt-6 max-w-2xl text-pretty text-base text-white/90 text-shadow-photo sm:text-lg">

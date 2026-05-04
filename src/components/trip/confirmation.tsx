@@ -43,7 +43,7 @@ function ConfirmationInner({ locale }: { locale: Locale }) {
       <div className="mx-auto grid h-20 w-20 place-items-center rounded-full bg-accent text-accent-foreground">
         <Check className="h-10 w-10" />
       </div>
-      <h1 className="font-display mt-10 text-5xl text-foreground sm:text-7xl">
+      <h1 className="font-display mt-10 text-balance text-4xl text-foreground sm:text-5xl lg:text-7xl">
         {t("title")}
       </h1>
       <p className="mx-auto mt-6 max-w-md text-pretty text-foreground/80">
@@ -51,7 +51,7 @@ function ConfirmationInner({ locale }: { locale: Locale }) {
       </p>
 
       {inquiry && (
-        <div className="mx-auto mt-12 max-w-md rounded-md border border-foreground/10 bg-card p-8 text-left">
+        <div className="mx-auto mt-12 max-w-md rounded-md border border-foreground/10 bg-card p-5 text-left sm:p-8">
           <div className="flex items-center justify-between">
             <p className="text-xs uppercase tracking-[0.28em] text-foreground/50">
               {t("reference")}

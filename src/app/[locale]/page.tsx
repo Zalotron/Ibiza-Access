@@ -3,6 +3,7 @@ import { HeroCarousel } from "@/components/marketing/hero-carousel";
 import { HeadlineSection } from "@/components/marketing/headline-section";
 import { SectionDivider } from "@/components/marketing/section-divider";
 import { ServicesIndex } from "@/components/marketing/services-index";
+import { DepthLines } from "@/components/marketing/depth-lines";
 import type { Locale } from "@/i18n/routing";
 
 export default async function HomePage({
@@ -16,6 +17,7 @@ export default async function HomePage({
 
   return (
     <>
+      <DepthLines />
       <HeroCarousel />
       <HeadlineSection />
       <SectionDivider />

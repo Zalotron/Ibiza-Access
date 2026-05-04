@@ -5,6 +5,8 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useTranslations } from "next-intl";
 import { PrimaryCtaLink } from "@/components/ui/primary-cta";
+import { ScrollFade } from "@/components/motion/scroll-fade";
+import { SplitText } from "@/components/motion/split-text";
 
 export function HeadlineSection() {
   const t = useTranslations("home");
@@ -20,9 +22,9 @@ export function HeadlineSection() {
       ref={ref}
       className="relative overflow-hidden py-12 sm:py-16 lg:py-20"
     >
-      <div className="container-tight grid items-stretch gap-12 lg:grid-cols-12 lg:gap-16">
+      <div className="container-tight grid grid-cols-1 items-stretch gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="relative lg:col-span-5">
-          <div className="relative h-full min-h-[60vh] overflow-hidden rounded-md bg-muted lg:min-h-0">
+          <ScrollFade className="relative h-full min-h-[60vh] overflow-hidden rounded-md bg-muted lg:min-h-0">
             <motion.div
               style={{ y: imgY }}
               className="absolute -inset-y-12 inset-x-0"
@@ -35,42 +37,52 @@ export function HeadlineSection() {
                 className="object-cover"
               />
             </motion.div>
-          </div>
+          </ScrollFade>
           <div className="absolute -inset-x-4 -bottom-4 -z-10 h-2/3 rounded-md bg-accent/15 blur-3xl" />
         </div>
 
         <div className="lg:col-span-7">
-          <p className="text-xs uppercase tracking-[0.32em] text-accent">
+          <SplitText
+            as="p"
+            className="text-xs uppercase tracking-[0.32em] text-accent"
+          >
             {t("headlineEyebrow")}
-          </p>
+          </SplitText>
 
-          <h2 className="font-serif mt-5 text-3xl leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">
-            <span className="block whitespace-nowrap">
+          <h2 className="font-serif mt-5 text-balance text-3xl leading-[1.1] text-foreground sm:text-4xl lg:text-5xl lg:text-pretty">
+            <SplitText as="span" className="block lg:whitespace-nowrap">
               {t("headlineTitleLead")}{" "}
-              <span className="italic text-accent">
+              <SplitText className="italic text-accent">
                 {t("headlineTitleAccent")}
-              </span>{" "}
+              </SplitText>{" "}
               {t("headlineTitleConnector")}
-            </span>
-            <span className="block whitespace-nowrap">
+            </SplitText>
+            <SplitText as="span" className="block lg:whitespace-nowrap">
               {t("headlineTitleSecond")}{" "}
-              <span className="italic text-accent">
+              <SplitText className="italic text-accent">
                 {t("headlineTitleAccent2")}
-              </span>
-            </span>
+              </SplitText>
+            </SplitText>
           </h2>
 
           <div className="mt-10 space-y-5 text-base leading-relaxed text-foreground/75 sm:text-lg">
-            <p>{t("headlineParagraph1")}</p>
-            <p>
+            <SplitText as="p">{t("headlineParagraph1")}</SplitText>
+            <SplitText as="p">
               {t("headlineParagraph2")}{" "}
-              <em className="italic text-foreground">{t("headlineTagline")}</em>
-            </p>
+              <SplitText as="em" className="italic text-foreground">
+                {t("headlineTagline")}
+              </SplitText>
+            </SplitText>
           </div>
 
-          <div className="mt-10">
-            <PrimaryCtaLink href="/#services">{t("headlineCta")}</PrimaryCtaLink>
-          </div>
+          <ScrollFade className="mt-10 inline-block max-w-full">
+            <PrimaryCtaLink
+              href="/#services"
+              className="h-auto min-h-14 max-w-full whitespace-normal text-balance px-5 py-3 sm:h-14 sm:whitespace-nowrap sm:px-8 sm:py-0"
+            >
+              {t("headlineCta")}
+            </PrimaryCtaLink>
+          </ScrollFade>
         </div>
       </div>
     </section>

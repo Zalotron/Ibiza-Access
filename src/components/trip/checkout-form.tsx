@@ -64,7 +64,7 @@ export function CheckoutForm({ locale }: { locale: Locale }) {
         <p className="text-xs uppercase tracking-[0.32em] text-accent">
           {t("eyebrow")}
         </p>
-        <h1 className="font-display mt-4 text-5xl text-foreground sm:text-6xl">
+        <h1 className="font-display mt-4 text-balance text-4xl text-foreground sm:text-5xl lg:text-6xl">
           {t("title")}
         </h1>
 
@@ -143,7 +143,7 @@ export function CheckoutForm({ locale }: { locale: Locale }) {
       </div>
 
       <aside className="lg:sticky lg:top-32 lg:self-start">
-        <div className="rounded-md border border-foreground/10 bg-card p-8">
+        <div className="rounded-md border border-foreground/10 bg-card p-5 sm:p-8">
           <p className="text-xs uppercase tracking-[0.28em] text-foreground/50">
             {t("summary")}
           </p>

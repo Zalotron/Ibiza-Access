@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { ScrollFade } from "@/components/motion/scroll-fade";
 
 /**
  * Reusable hairline + diamond ornament between two sections.
@@ -13,11 +14,11 @@ export function SectionDivider({ className }: { className?: string }) {
         className,
       )}
     >
-      <div className="flex items-center gap-5 text-accent">
+      <ScrollFade className="flex items-center gap-5 text-accent">
         <span className="h-px w-20 bg-current" />
         <span className="block h-1.5 w-1.5 rotate-45 bg-current" />
         <span className="h-px w-20 bg-current" />
-      </div>
+      </ScrollFade>
     </div>
   );
 }

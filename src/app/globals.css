@@ -59,6 +59,12 @@
     font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
     background: var(--color-background);
     color: var(--color-foreground);
+    /* Hard floor against horizontal scroll on mobile — ScrollFade scaling,
+       parallax shadows, and rotated decorative lines all extend beyond their
+       boxes and could otherwise creep past the viewport edge. `clip` (vs
+       `hidden`) doesn't create a new scroll context, so it doesn't break
+       position:sticky / smooth scroll on parent elements. */
+    overflow-x: clip;
   }
 
   h1,
@@ -105,6 +111,49 @@
 
   .text-pretty {
     text-wrap: pretty;
+  }
+
+  /* Scroll-driven depth-of-field — directional. Two CSS vars are written by
+     the rAF loop in src/lib/scroll-fade.ts:
+       --fade-back  → element is BELOW the safe zone (receding = smaller,
+                      blurred, darker, faded)
+       --fade-front → element is ABOVE the safe zone (approaching the camera =
+                      LARGER and blurred, like a close-up out of focus; not
+                      darkened, since a close subject isn't darker)
+     Both are 0 inside the safe zone (sharp focus). Only one is non-zero at a
+     time. brightness() is skipped on words because reducing brightness on
+     dark glyphs on a light background adds contrast instead of fading. */
+  .scroll-fade {
+    --fade-back: 0;
+    --fade-front: 0;
+    position: relative;
+    z-index: 1;
+    transform: scale(
+      calc(1 - var(--fade-back) * 0.18 + var(--fade-front) * 0.28)
+    );
+    filter: blur(
+        calc(var(--fade-back) * 8px + var(--fade-front) * 12px)
+      )
+      brightness(calc(1 - var(--fade-back) * 0.45));
+    opacity: calc(1 - var(--fade-back) * 0.7);
+    will-change: transform, filter, opacity;
+  }
+
+  /* Per-word variant — same effect, but inline-block so words flow as text.
+     Words on the same visual line share the same y-coordinate, so they read
+     "per renglón" naturally without explicit line grouping. */
+  .scroll-fade-word {
+    --fade-back: 0;
+    --fade-front: 0;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transform: scale(
+      calc(1 - var(--fade-back) * 0.18 + var(--fade-front) * 0.28)
+    );
+    filter: blur(calc(var(--fade-back) * 6px + var(--fade-front) * 9px));
+    opacity: calc(1 - var(--fade-back) * 0.85);
+    will-change: transform, filter, opacity;
   }
 
   .container-tight {

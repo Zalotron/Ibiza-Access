@@ -306,11 +306,11 @@ export function Carousel({
                           </p>
                         )}
                         {slide.title && (
-                          <h2 className="font-serif mt-6 max-w-none text-center text-3xl uppercase leading-[1.1] tracking-tight text-white text-shadow-photo sm:text-5xl lg:text-6xl">
+                          <h2 className="font-serif mt-6 max-w-[calc(100vw-2rem)] text-balance text-center text-3xl uppercase leading-[1.1] tracking-tight text-white text-shadow-photo sm:text-5xl lg:max-w-none lg:text-6xl lg:text-pretty">
                             {slide.title.split("\n").map((line, li) => (
                               <span
                                 key={li}
-                                className="block whitespace-nowrap"
+                                className="block lg:whitespace-nowrap"
                               >
                                 {line}
                               </span>
@@ -345,7 +345,14 @@ export function Carousel({
             <div className="absolute inset-0 -translate-x-full transition-transform duration-default ease-default group-hover/prev:translate-x-0 group-focus-visible/prev:translate-x-0">
               <div className="absolute inset-0 backdrop-blur-md [-webkit-mask-image:linear-gradient(to_right,black_0%,black_25%,transparent_100%)] [mask-image:linear-gradient(to_right,black_0%,black_25%,transparent_100%)]" />
               <div className="relative flex h-full items-center justify-start pl-6 text-white text-shadow-photo sm:pl-8 lg:pl-10">
-                <ChevronLeft className="h-12 w-12" aria-hidden="true" />
+                <ChevronLeft
+                  className="h-12 w-12 will-change-transform"
+                  aria-hidden="true"
+                  style={{
+                    transform:
+                      "translate3d(0, var(--parallax-translate-y, 0%), 0)",
+                  }}
+                />
               </div>
             </div>
           </button>
@@ -358,7 +365,14 @@ export function Carousel({
             <div className="absolute inset-0 translate-x-full transition-transform duration-default ease-default group-hover/next:translate-x-0 group-focus-visible/next:translate-x-0">
               <div className="absolute inset-0 backdrop-blur-md [-webkit-mask-image:linear-gradient(to_left,black_0%,black_25%,transparent_100%)] [mask-image:linear-gradient(to_left,black_0%,black_25%,transparent_100%)]" />
               <div className="relative flex h-full items-center justify-end pr-6 text-white text-shadow-photo sm:pr-8 lg:pr-10">
-                <ChevronRight className="h-12 w-12" aria-hidden="true" />
+                <ChevronRight
+                  className="h-12 w-12 will-change-transform"
+                  aria-hidden="true"
+                  style={{
+                    transform:
+                      "translate3d(0, var(--parallax-translate-y, 0%), 0)",
+                  }}
+                />
               </div>
             </div>
           </button>
@@ -373,7 +387,7 @@ export function Carousel({
               type="button"
               onClick={() => emblaApi?.scrollTo(i)}
               className={cn(
-                "h-1.5 rounded-sm shadow-photo transition-all duration-default ease-default",
+                "h-1.5 rounded-sm shadow-[0_0_12px_rgba(0,0,0,0.6)] transition-all duration-default ease-default",
                 i === index
                   ? "w-10 bg-accent"
                   : "w-3 bg-white/40 hover:bg-white/70",

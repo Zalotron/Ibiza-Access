@@ -7,7 +7,7 @@ import { Link } from "@/i18n/navigation";
 import { Trash2, Calendar, Users } from "lucide-react";
 import { useTripStore, useTripTotal, useTripDeposit } from "@/lib/store/trip-store";
 import { services } from "@/lib/data/services";
-import { formatPrice, cn } from "@/lib/utils";
+import { formatPrice, cn, withBase } from "@/lib/utils";
 import { PrimaryCtaLink } from "@/components/ui/primary-cta";
 import type { Locale } from "@/i18n/routing";
 
@@ -72,7 +72,7 @@ export function TripCart({ locale }: { locale: Locale }) {
                 >
                   <div className="relative h-28 w-28 flex-shrink-0 overflow-hidden rounded-sm sm:h-32 sm:w-32">
                     <Image
-                      src={item.imageSnapshot}
+                      src={withBase(item.imageSnapshot)}
                       alt={item.titleSnapshot}
                       fill
                       sizes="128px"

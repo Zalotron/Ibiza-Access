@@ -8,6 +8,7 @@ import { Link } from "@/i18n/navigation";
 import { ArrowLeft } from "lucide-react";
 import type { Service } from "@/lib/types";
 import type { Locale } from "@/i18n/routing";
+import { withBase } from "@/lib/utils";
 
 export function ServiceDetail({
   service,
@@ -37,7 +38,7 @@ export function ServiceDetail({
         className="absolute inset-0 -z-10"
       >
         <Image
-          src={service.image}
+          src={withBase(service.image)}
           alt={service.title[locale]}
           fill
           priority

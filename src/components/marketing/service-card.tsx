@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Check } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn, withBase } from "@/lib/utils";
 
 /**
  * Brand service card — single source of truth for how a service is displayed
@@ -37,7 +37,7 @@ export function ServiceCard({
       )}
     >
       <Image
-        src={img}
+        src={withBase(img)}
         alt={titulo}
         fill
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"

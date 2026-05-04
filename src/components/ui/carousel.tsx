@@ -10,7 +10,7 @@ import {
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn, withBase } from "@/lib/utils";
 
 export type CarouselSlide = {
   /** REQUIRED background image. */
@@ -265,7 +265,7 @@ export function Carousel({
                 className="relative h-full min-w-0 flex-[0_0_100%]"
               >
                 <Image
-                  src={slide.src}
+                  src={withBase(slide.src)}
                   alt={slide.alt}
                   fill
                   priority={priority && i === 0}

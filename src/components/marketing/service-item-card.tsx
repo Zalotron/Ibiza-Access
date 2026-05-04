@@ -1,0 +1,161 @@
+"use client";
+
+import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { MapPin, Plus, Check } from "lucide-react";
+import type { ServiceItem, ItemSpec } from "@/lib/types";
+import type { Locale } from "@/i18n/routing";
+import { formatPrice, cn, withBase } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { useIsItemInTrip, useTripStore } from "@/lib/store/trip-store";
+
+/**
+ * Brand item card — renders one option inside a service detail page (e.g. a
+ * specific villa, yacht, chef profile). Single source of truth for how items
+ * are displayed in any listing. Mirrors ServiceCard's hover (scale + halo
+ * shadow) so the two card families feel coherent.
+ */
+function SpecChip({ spec }: { spec: ItemSpec }) {
+  const t = useTranslations("items.specs");
+  let text: string;
+
+  if (spec.label) {
+    text = spec.label;
+  } else if (spec.key && spec.value !== undefined && spec.value !== null) {
+    text = `${spec.value} ${t(spec.key as never)}`;
+  } else if (spec.key) {
+    text = t(spec.key as never);
+  } else {
+    return null;
+  }
+
+  return (
+    <span className="inline-flex items-center rounded-sm bg-foreground/5 px-2 py-1 text-[11px] uppercase tracking-[0.12em] text-foreground/70">
+      {text}
+    </span>
+  );
+}
+
+export type ServiceItemCardProps = {
+  item: ServiceItem;
+  serviceSlug: string;
+  locale: Locale;
+  className?: string;
+};
+
+export function ServiceItemCard({
+  item,
+  serviceSlug,
+  locale,
+  className,
+}: ServiceItemCardProps) {
+  const tItems = useTranslations("items");
+  const tUnits = useTranslations("items.units");
+  const tCta = useTranslations("cta");
+  const tServices = useTranslations("services");
+
+  const inTrip = useIsItemInTrip(serviceSlug, item.id);
+  const add = useTripStore((s) => s.add);
+  const remove = useTripStore((s) => s.remove);
+  const lineItems = useTripStore((s) => s.items);
+
+  const handleToggle = () => {
+    if (inTrip) {
+      const existing = lineItems.find(
+        (i) => i.serviceSlug === serviceSlug && i.itemId === item.id,
+      );
+      if (existing) remove(existing.id);
+    } else {
+      add({
+        serviceSlug,
+        itemId: item.id,
+        priceCents: item.priceFromCents ?? 0,
+        titleSnapshot: item.name,
+        imageSnapshot: item.image,
+      });
+    }
+  };
+
+  return (
+    <li
+      className={cn(
+        "group relative isolate flex flex-col overflow-hidden rounded-md border border-foreground/10 bg-card shadow-[0_0_0_rgba(0,0,0,0.5)] transition-[scale,transform,box-shadow] duration-default ease-default hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(0,0,0,0.18)]",
+        inTrip && "ring-1 ring-accent",
+        className,
+      )}
+    >
+      <div className="relative aspect-[4/3] w-full overflow-hidden bg-muted">
+        <Image
+          src={withBase(item.image)}
+          alt={item.name}
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-cover transition-[scale,transform] duration-default ease-default group-hover:scale-105"
+        />
+      </div>
+      <div className="flex flex-1 flex-col gap-4 p-5 sm:p-6">
+        <header>
+          <h3 className="font-display text-2xl text-foreground">{item.name}</h3>
+          {item.location && (
+            <p className="mt-1 inline-flex items-center gap-1 text-xs uppercase tracking-[0.18em] text-foreground/50">
+              <MapPin className="h-3 w-3" aria-hidden="true" />
+              {item.location}
+            </p>
+          )}
+        </header>
+
+        {item.specs && item.specs.length > 0 && (
+          <div className="flex flex-wrap gap-1.5">
+            {item.specs.map((spec, i) => (
+              <SpecChip key={`${item.id}-spec-${i}`} spec={spec} />
+            ))}
+          </div>
+        )}
+
+        <div className="mt-auto flex items-end justify-between gap-3 border-t border-foreground/10 pt-4">
+          {item.priceFromCents !== undefined && item.priceFromCents > 0 ? (
+            <div className="flex flex-col">
+              <span className="text-[10px] uppercase tracking-[0.2em] text-foreground/50">
+                {tItems("from")}
+              </span>
+              <span className="font-display text-xl text-foreground">
+                {formatPrice(item.priceFromCents, locale)}
+                {item.priceToCents && item.priceToCents > item.priceFromCents
+                  ? ` – ${formatPrice(item.priceToCents, locale)}`
+                  : ""}
+                {item.unit && (
+                  <span className="ml-1 text-xs text-foreground/50">
+                    {tUnits(item.unit as never)}
+                  </span>
+                )}
+              </span>
+            </div>
+          ) : (
+            <span className="text-xs uppercase tracking-[0.2em] text-foreground/50">
+              {item.unit ? tUnits(item.unit as never) : ""}
+            </span>
+          )}
+          <Button
+            type="button"
+            variant={inTrip ? "outline" : "accent"}
+            size="sm"
+            onClick={handleToggle}
+            aria-pressed={inTrip}
+          >
+            {inTrip ? (
+              <>
+                <Check className="h-3 w-3" aria-hidden="true" />
+                {tServices("addedToTrip")}
+              </>
+            ) : (
+              <>
+                <Plus className="h-3 w-3" aria-hidden="true" />
+                {tCta("addToTrip")}
+              </>
+            )}
+          </Button>
+        </div>
+      </div>
+    </li>
+  );
+}

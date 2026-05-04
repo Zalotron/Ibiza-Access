@@ -15,7 +15,6 @@ export type Service = {
   /** Localized title + summary, used in cards and meta */
   title: Record<Locale, string>;
   tagline: Record<Locale, string>;
-  highlights: Record<Locale, string[]>;
 };
 
 export type TripItem = {
@@ -73,10 +72,3 @@ export type ServiceItem = {
   specs?: ItemSpec[];
 };
 
-export type Testimonial = {
-  id: string;
-  name: string;
-  origin: Record<Locale, string>;
-  quote: Record<Locale, string>;
-  rating: number;
-};

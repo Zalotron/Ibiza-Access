@@ -48,9 +48,9 @@ export function HeroCarousel() {
       {/* Static row of CTAs anchored just below the slide-bound description */}
       <div className="container-tight pointer-events-none absolute inset-x-0 bottom-28 z-10 sm:bottom-36">
         <div className="pointer-events-auto flex flex-wrap items-center justify-center gap-3">
-          <PrimaryCtaLink href="/services">{tCta("buildTrip")}</PrimaryCtaLink>
+          <PrimaryCtaLink href="/#services">{tCta("buildTrip")}</PrimaryCtaLink>
           <Link
-            href="/services"
+            href="/#services"
             className="inline-flex h-14 items-center gap-2 rounded-md border border-white/40 bg-black/50 px-8 text-base font-medium text-white backdrop-blur-md transition-all hover:bg-white hover:text-foreground"
           >
             {tCta("viewServices")}

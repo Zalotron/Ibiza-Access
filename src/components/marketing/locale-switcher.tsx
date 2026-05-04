@@ -31,7 +31,16 @@ export function LocaleSwitcher({ className }: { className?: string }) {
           )}
           <button
             type="button"
-            onClick={() => router.replace(pathname, { locale })}
+            onClick={() => {
+              const hash =
+                typeof window !== "undefined" ? window.location.hash : "";
+              const search =
+                typeof window !== "undefined" ? window.location.search : "";
+              router.replace(`${pathname}${search}${hash}` as typeof pathname, {
+                locale,
+                scroll: false,
+              });
+            }}
             className={cn(
               "rounded-sm px-1 transition-opacity",
               current === locale

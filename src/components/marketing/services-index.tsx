@@ -1,62 +1,49 @@
 "use client";
 
-import { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { ServiceCard } from "./service-card";
 import { services } from "@/lib/data/services";
+import { useTripStore } from "@/lib/store/trip-store";
 import type { Locale } from "@/i18n/routing";
-import type { ServiceCategory } from "@/lib/types";
-import { cn } from "@/lib/utils";
-
-const CATEGORY_IDS = ["all", "stay", "transport", "experience", "wellness"] as const;
-type CategoryId = (typeof CATEGORY_IDS)[number];
 
 export function ServicesIndex({ locale }: { locale: Locale }) {
   const t = useTranslations("services");
-  const [active, setActive] = useState<CategoryId>("all");
-
-  const filtered = useMemo(
-    () =>
-      active === "all"
-        ? services
-        : services.filter((s) => s.category === (active as ServiceCategory)),
-    [active],
-  );
+  const trip = useTripStore((s) => s.items);
 
   return (
-    <div className="container-tight pt-32 sm:pt-40 pb-20">
-      <p className="text-xs uppercase tracking-[0.32em] text-accent">
-        {t("catalog")}
-      </p>
-      <h1 className="font-display mt-4 max-w-3xl text-balance text-5xl text-foreground sm:text-7xl">
+    <div className="container-tight py-10 sm:py-14">
+      <h2 className="font-serif max-w-3xl text-balance text-5xl italic text-accent [text-shadow:0_2px_14px_rgba(0,0,0,0.18)] sm:text-6xl">
         {t("title")}
-      </h1>
-      <p className="mt-6 max-w-xl text-base text-foreground/70">
-        {t("subtitle")}
-      </p>
-
-      <div className="mt-12 flex flex-wrap gap-2">
-        {CATEGORY_IDS.map((id) => (
-          <button
-            key={id}
-            type="button"
-            onClick={() => setActive(id)}
-            className={cn(
-              "rounded-md border px-4 py-2 text-xs uppercase tracking-[0.2em] transition-colors",
-              active === id
-                ? "border-accent bg-accent text-accent-foreground"
-                : "border-foreground/15 text-foreground/70 hover:border-foreground/30",
-            )}
-          >
-            {t(`categories.${id}`)}
-          </button>
-        ))}
+      </h2>
+      <div className="mt-8 max-w-3xl space-y-5 text-base leading-relaxed text-foreground/75 sm:text-lg">
+        <p>{t("intro1")}</p>
+        <p>{t("intro2")}</p>
+        <p>{t("intro3")}</p>
+        <p>
+          {t("intro4")}{" "}
+          <em className="italic text-foreground">{t("tagline")}</em>
+        </p>
       </div>
 
       <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {filtered.map((service) => (
-          <ServiceCard key={service.slug} service={service} locale={locale} />
-        ))}
+        {services.map((service) => {
+          const used = trip.some((i) => i.serviceSlug === service.slug);
+          return (
+            <Link
+              key={service.slug}
+              href={`/services/${service.slug}`}
+              className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md"
+            >
+              <ServiceCard
+                img={service.image}
+                titulo={service.title[locale]}
+                descripcion={service.tagline[locale]}
+                used={used}
+              />
+            </Link>
+          );
+        })}
       </div>
     </div>
   );

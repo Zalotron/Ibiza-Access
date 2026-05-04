@@ -6,15 +6,11 @@ import privateJet from "./items/private-jet.json";
 import luxuryCars from "./items/luxury-cars.json";
 import carRental from "./items/car-rental.json";
 import privateChefs from "./items/private-chefs.json";
-import vipTables from "./items/vip-tables.json";
 import beachClubs from "./items/beach-clubs.json";
-import privateParties from "./items/private-parties.json";
-import bachelorBachelorettes from "./items/bachelor-bachelorettes.json";
 import wellness from "./items/wellness.json";
 import ivTherapy from "./items/iv-therapy.json";
 import securityDrivers from "./items/security-drivers.json";
 import tailoredHolidays from "./items/tailored-holidays.json";
-import transfers from "./items/transfers.json";
 import otherRequests from "./items/other-requests.json";
 
 const ITEMS: Record<string, ServiceItem[]> = {
@@ -24,15 +20,11 @@ const ITEMS: Record<string, ServiceItem[]> = {
   "luxury-cars": luxuryCars as ServiceItem[],
   "car-rental": carRental as ServiceItem[],
   "private-chefs": privateChefs as ServiceItem[],
-  "vip-tables": vipTables as ServiceItem[],
   "beach-clubs": beachClubs as ServiceItem[],
-  "private-parties": privateParties as ServiceItem[],
-  "bachelor-bachelorettes": bachelorBachelorettes as ServiceItem[],
   wellness: wellness as ServiceItem[],
   "iv-therapy": ivTherapy as ServiceItem[],
   "security-drivers": securityDrivers as ServiceItem[],
   "tailored-holidays": tailoredHolidays as ServiceItem[],
-  transfers: transfers as ServiceItem[],
   "other-requests": otherRequests as ServiceItem[],
 };
 

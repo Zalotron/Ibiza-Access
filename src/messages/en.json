@@ -55,15 +55,16 @@
     "processStep2Title": "Get your proposal",
     "processStep2Body": "Within 24h your dedicated concierge sends a detailed proposal with availability, locked-in prices and alternatives.",
     "processStep3Title": "Enjoy Ibiza",
-    "processStep3Body": "You pay a deposit to confirm and we handle the rest. You arrive and everything is coordinated.",
-    "testimonialsEyebrow": "What past travelers say",
-    "ctaTitle": "Start building your trip",
-    "ctaSubtitle": "Add what you want, adjust dates, and we'll lock in the rest."
+    "processStep3Body": "You pay a deposit to confirm and we handle the rest. You arrive and everything is coordinated."
   },
   "services": {
     "catalog": "Catalog",
     "title": "Services",
-    "subtitle": "Curated so your stay has zero friction.",
+    "intro1": "Concierge in Ibiza is not simply about making reservations. It is about anticipating needs, simplifying logistics and creating a sense of ease from arrival to departure.",
+    "intro2": "At Ibiza Access, our Ibiza concierge service adapts entirely to you — from sourcing the most suitable villas or hotels to last-minute arrangements, private transfers, yacht charters, wellness experiences and bespoke requests handled discreetly behind the scenes.",
+    "intro3": "With over ten years of local presence, we operate through a trusted network of partners, granting access to services and opportunities not publicly available. Our team is based on the island year-round, ensuring responsiveness, reliability and continuity at all times.",
+    "intro4": "This is Ibiza, curated around you —",
+    "tagline": "Curated luxury, made with intention.",
     "addedToTrip": "Added to your trip",
     "from": "From",
     "price": "Price",

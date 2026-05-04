@@ -41,7 +41,7 @@ export function TripCart({ locale }: { locale: Locale }) {
         <p className="mx-auto mt-4 max-w-md text-foreground/70">
           {tTrip("emptyHint")}
         </p>
-        <PrimaryCtaLink href="/services" className="mt-10">
+        <PrimaryCtaLink href="/#services" className="mt-10">
           {tCta("viewServices")}
         </PrimaryCtaLink>
       </div>

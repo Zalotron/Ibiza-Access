@@ -8,7 +8,6 @@ const ROOT = "https://zalotron.github.io/Ibiza-Access";
 
 const STATIC_PATHS = [
   "",
-  "/services",
   "/trip",
   "/about",
   "/blog",

@@ -30,11 +30,21 @@
   --duration-cta: 220ms;
   --ease-cta: cubic-bezier(0.16, 1, 0.3, 1);
 
+  /* Parent containers (cards, panels). Doubled duration vs default; very steep
+     start + very gentle end. Same character on both enter and exit. */
+  --duration-container: 600ms;
+  --ease-container: cubic-bezier(0.05, 1, 0.2, 1);
+
   --text-shadow-photo: var(--parallax-x, 0px) var(--parallax-y, 0px) 20px rgba(0, 0, 0, 1);
   --shadow-photo: var(--parallax-x, 0px) var(--parallax-y, 0px) 12px rgba(0, 0, 0, 0.6);
 }
 
 @layer base {
+  :root {
+    /* Allow CSS transitions involving `auto` keywords (height: 0 → auto). */
+    interpolate-size: allow-keywords;
+  }
+
   * {
     border-color: var(--color-border);
   }

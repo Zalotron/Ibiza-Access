@@ -55,15 +55,16 @@
     "processStep2Title": "Recevez votre proposition",
     "processStep2Body": "En 24h votre concierge dédié vous envoie une proposition détaillée avec disponibilités, prix fermes et alternatives.",
     "processStep3Title": "Profitez d'Ibiza",
-    "processStep3Body": "Vous payez un acompte pour confirmer et nous nous occupons du reste. Vous arrivez et tout est coordonné.",
-    "testimonialsEyebrow": "Ce que disent les voyageurs",
-    "ctaTitle": "Commencez à concevoir votre voyage",
-    "ctaSubtitle": "Ajoutez ce que vous voulez, ajustez les dates, et nous nous occupons du reste."
+    "processStep3Body": "Vous payez un acompte pour confirmer et nous nous occupons du reste. Vous arrivez et tout est coordonné."
   },
   "services": {
     "catalog": "Catalogue",
     "title": "Services",
-    "subtitle": "Sélectionnés pour que votre séjour soit sans aucune friction.",
+    "intro1": "La conciergerie à Ibiza ne consiste pas simplement à faire des réservations. Il s'agit d'anticiper les besoins, de simplifier la logistique et de créer un sentiment de fluidité de l'arrivée au départ.",
+    "intro2": "Chez Ibiza Access, notre service de conciergerie s'adapte entièrement à vous — du sourcing des villas ou hôtels les plus adaptés aux arrangements de dernière minute, transferts privés, locations de yachts, expériences wellness et demandes sur mesure gérées avec discrétion en coulisses.",
+    "intro3": "Avec plus de dix ans de présence locale, nous opérons à travers un réseau de partenaires de confiance, donnant accès à des services et des opportunités non disponibles publiquement. Notre équipe est basée sur l'île toute l'année, garantissant réactivité, fiabilité et continuité à tout moment.",
+    "intro4": "C'est Ibiza, curaté autour de vous —",
+    "tagline": "Un luxe curaté, fait avec intention.",
     "addedToTrip": "Ajouté à votre voyage",
     "from": "À partir de",
     "price": "Prix",

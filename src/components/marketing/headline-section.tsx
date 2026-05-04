@@ -18,7 +18,7 @@ export function HeadlineSection() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden py-24 sm:py-32 lg:py-40"
+      className="relative overflow-hidden py-12 sm:py-16 lg:py-20"
     >
       <div className="container-tight grid items-stretch gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="relative lg:col-span-5">
@@ -45,15 +45,18 @@ export function HeadlineSection() {
           </p>
 
           <h2 className="font-serif mt-5 text-3xl leading-[1.1] text-foreground sm:text-4xl lg:text-5xl">
-            {t("headlineTitleLead")}{" "}
-            <span className="italic text-accent">
-              {t("headlineTitleAccent")}
-            </span>{" "}
-            {t("headlineTitleConnector")}
-            <br />
-            {t("headlineTitleSecond")}{" "}
-            <span className="italic text-accent">
-              {t("headlineTitleAccent2")}
+            <span className="block whitespace-nowrap">
+              {t("headlineTitleLead")}{" "}
+              <span className="italic text-accent">
+                {t("headlineTitleAccent")}
+              </span>{" "}
+              {t("headlineTitleConnector")}
+            </span>
+            <span className="block whitespace-nowrap">
+              {t("headlineTitleSecond")}{" "}
+              <span className="italic text-accent">
+                {t("headlineTitleAccent2")}
+              </span>
             </span>
           </h2>
 
@@ -66,7 +69,7 @@ export function HeadlineSection() {
           </div>
 
           <div className="mt-10">
-            <PrimaryCtaLink href="/services">{t("headlineCta")}</PrimaryCtaLink>
+            <PrimaryCtaLink href="/#services">{t("headlineCta")}</PrimaryCtaLink>
           </div>
         </div>
       </div>

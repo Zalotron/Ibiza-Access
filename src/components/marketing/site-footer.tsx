@@ -21,7 +21,7 @@ export function SiteFooter({ locale: _locale }: { locale: Locale }) {
           </p>
           <ul className="mt-4 space-y-3 text-sm text-foreground/70">
             <li>
-              <Link href="/services" className="hover:text-foreground">
+              <Link href="/#services" className="hover:text-foreground">
                 {t("nav.services")}
               </Link>
             </li>

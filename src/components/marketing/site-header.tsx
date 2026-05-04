@@ -23,7 +23,7 @@ export function SiteHeader({ locale: _locale }: { locale: Locale }) {
   }, []);
 
   const links = [
-    { href: "/services", label: t("services") },
+    { href: "/#services", label: t("services") },
     { href: "/about", label: t("about") },
     { href: "/blog", label: t("blog") },
     { href: "/contact", label: t("contact") },

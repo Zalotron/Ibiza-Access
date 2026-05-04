@@ -52,7 +52,7 @@ export function ServiceDetail({
 
       <div className="container-tight pb-16 pt-32">
         <Link
-          href="/services"
+          href="/#services"
           className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.28em] text-white/80 text-shadow-photo transition-opacity hover:opacity-100"
         >
           <ArrowLeft className="h-3 w-3" aria-hidden="true" />

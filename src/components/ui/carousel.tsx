@@ -306,8 +306,15 @@ export function Carousel({
                           </p>
                         )}
                         {slide.title && (
-                          <h2 className="font-serif mt-6 max-w-none whitespace-pre-line text-center text-3xl uppercase leading-[1.1] tracking-tight text-white text-shadow-photo sm:text-5xl lg:text-6xl">
-                            {slide.title}
+                          <h2 className="font-serif mt-6 max-w-none text-center text-3xl uppercase leading-[1.1] tracking-tight text-white text-shadow-photo sm:text-5xl lg:text-6xl">
+                            {slide.title.split("\n").map((line, li) => (
+                              <span
+                                key={li}
+                                className="block whitespace-nowrap"
+                              >
+                                {line}
+                              </span>
+                            ))}
                           </h2>
                         )}
                         {slide.description && (
